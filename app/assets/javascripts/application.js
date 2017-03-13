@@ -16,3 +16,4 @@
 //= require_tree .
 //= require jquery.turbolinks
 //= require bootstrap/dropdown
+//= require global
