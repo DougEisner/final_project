@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170313144453) do
+ActiveRecord::Schema.define(version: 20170314155032) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -28,6 +28,28 @@ ActiveRecord::Schema.define(version: 20170313144453) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.index ["priority", "run_at"], name: "delayed_jobs_priority", using: :btree
+  end
+
+  create_table "licenses", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "product_id"
+    t.decimal  "price"
+    t.date     "expiration_date"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
+    t.index ["product_id"], name: "index_licenses_on_product_id", using: :btree
+    t.index ["user_id"], name: "index_licenses_on_user_id", using: :btree
+  end
+
+  create_table "products", force: :cascade do |t|
+    t.string   "title"
+    t.string   "developer"
+    t.string   "email"
+    t.string   "institution"
+    t.string   "category"
+    t.decimal  "price"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
   end
 
   create_table "users", force: :cascade do |t|
@@ -61,4 +83,6 @@ ActiveRecord::Schema.define(version: 20170313144453) do
     t.index ["unlock_token"], name: "index_users_on_unlock_token", unique: true, using: :btree
   end
 
+  add_foreign_key "licenses", "products"
+  add_foreign_key "licenses", "users"
 end
