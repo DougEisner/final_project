@@ -1,16 +1,17 @@
 Rails.application.routes.draw do
 
+  devise_scope :user do
+    get '/users/sign_up/:role', to: 'devise/registrations#new'
+  end
+
+  devise_for :users
+
   resources :licenses
   resources :products
   resources :charges
 
-  devise_for :business
-  devise_for :academic
-  devise_for :admin
-  devise_for :users
-
   root to: 'pages#index'
 
-  get '/secret', to: 'pages#secret', as: :secret
+  get '/pricing', to: 'pages#pricing', as: :pricing
 
 end
