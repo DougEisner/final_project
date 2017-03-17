@@ -1,12 +1,56 @@
-<% content_for :top_content do %>
-  <div class="jumbotron">
-    <div class="container">
-      <h1>Welcome!</h1>
-      <p>Register to get started.</p>
-      <p>
-        <%= link_to 'Register Academic', '/users/sign_up/academic', class: 'btn btn-primary btn-lg' %>
-        <%= link_to 'Register Business', '/users/sign_up/business', class: 'btn btn-primary  btn-lg' %>
-      </p>
+<section id="splash" class="parallax-container z-depth-2">
+  <div class="parallax">
+    <%= image_tag("abstract-vectors.png") %>
+  </div>
+  <div class="container">
+    <div class="row white-text center-align">
+        <h1>Data at your fingertips.</h1>
+        <h5>Our goal is to provide greater access to data and software produced in leading research institutions across country.</h5>
+        <%= image_tag("tech.png", class: 'tech-image') %>
     </div>
   </div>
-<% end %>
+</section>
+
+<section id="about">
+  <div class="container">
+    <div class="about-title">
+      <h4 class="center-align with-subtitle">Code Alliance</h4>
+      <h5 class="subtitle center-align">Purrr purr littel cat, little cat purr purr sit by the fire. </h5>
+    </div>
+    <div class="row three-paragraphs center-align">
+      <div class="col m4 s12">
+        <div class="row">
+          <div class="col s4 offset-s4 m6 offset-m3">
+            <%= image_tag("search.svg") %>
+          </div>
+        </div>
+        <h5>Soft Kitty</h5>
+        <p>
+          Lick butt sit on the laptop and i cry and cry and cry unless you pet me, and then maybe i cry just for fun destroy couch meow meow, i tell my human.
+        </p>
+      </div>
+      <div class="col m4 s12">
+        <div class="row">
+          <div class="col s4 offset-s4 m6 offset-m3">
+            <%= image_tag("cloud-computing.svg") %>
+          </div>
+        </div>
+        <h5>Warm Kitty</h5>
+        <p>
+          Meow meow, i tell my human where is my slave? Massacre a bird in the living room and then look like the cutest and most innocent animal on the planet cat slap dog in face yet kitten is playing with dead mouse, or present belly, scratch hand when stroked.
+        </p>
+      </div>
+      <div class="col m4 s12">
+        <div class="row">
+          <div class="col s4 offset-s4 m6 offset-m3">
+            <%= image_tag("idea.svg") %>
+          </div>
+        </div>
+        <h5>Little Ball of Fur</h5>
+        <p>
+          Eliminate reliance on integration specialists. Foster a self service philosophy and let the IT focus on business critical activities.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
