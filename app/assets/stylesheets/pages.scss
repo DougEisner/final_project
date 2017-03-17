@@ -1,3 +1,76 @@
 // Place all the styles related to the pages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+nav {
+  background-color: white;
+  position: relative;
+  z-index: 999;
+
+  li a,
+  li i {
+    color: #272D4E;
+  }
+
+  .brand-logo {
+    color: #272D4E;
+    padding-left: 1em;
+  }
+
+  .material-icons {
+    margin: 0;
+  }
+
+  .search:hover {
+    cursor: pointer;
+  }
+
+  .link:hover {
+    box-shadow: inset 0 -2px 0 0 #fbc02d;
+  }
+
+}
+
+#search {
+  background-color: white;
+  transform: translateY(-131px);
+  transition:transform 0.25s linear;
+  position: relative;
+  z-index: 9;
+  box-shadow: 1px 1px 10px -5px rgb(0,0,0);
+
+  .input-field {
+    margin: 0;
+
+    input {
+      border: none;
+      margin: 0;
+    }
+  }
+
+  &.open {
+    transform: translateY(0);
+  }
+}
+
+#splash {
+  background: linear-gradient(rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.7));
+  height: 100vh;
+  margin-top: -50px;
+  padding-top: 50px;
+
+  .tech-image {
+    height: 50vh;
+    margin: 2em;
+  }
+}
+
+#about {
+  .about-title {
+    margin: 4em 0;
+  }
+}
+
+h5 {
+  font-weight: lighter;
+}
