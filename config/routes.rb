@@ -13,5 +13,6 @@ Rails.application.routes.draw do
   root to: 'pages#index'
 
   get '/pricing', to: 'pages#pricing', as: :pricing
+  get '/license_template', to: 'pages#license_template', as: :license_template
 
 end
