@@ -52,8 +52,6 @@ nav {
 
 #search {
   background-color: white;
-  transform: translateY(-120px);
-  transition: all .5s linear;
   position: relative;
   z-index: 9;
 
@@ -64,11 +62,10 @@ nav {
       border: none;
       margin: 0;
     }
-  }
 
-  &.open {
-    transform: translateY(0);
-    animation: openOpacity .6s linear;
+    .close {
+      position: relative;
+    }
   }
 }
 
