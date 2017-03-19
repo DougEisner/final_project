@@ -1,24 +1,31 @@
-# README
+# CodeAlliance
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Summary
+ CodeAlliance is an online marketplace for software and datasets produced at universities.
 
-Things you may want to cover:
 
-* Ruby version
+## Technologies
 
-* System dependencies
+### Tools
+  * Git
+  * Atom
+  * Sketch
 
-* Configuration
+### Backend
+  * Ruby 2.4.0
+  * Rails 5.0.2
+  * Heroku
+  * PostgreSQL
+  * Devise
 
-* Database creation
+### Front-End
+  * HTML5
+  * Sass
+  * JavaScript
+  * jQuery
 
-* Database initialization
+## Our Team
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* [Doug Eisner](https://github.com/DougEisner) - Back-End Developer
+* [Joe Merchant](https://github.com/jnmerchant) - Back-End Developer
+* [Marliana Lara](https://github.com/marshmalien) - Front-End Developer
