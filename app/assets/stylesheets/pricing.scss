@@ -1,0 +1,40 @@
+#pricing-page {
+
+  .parallax-container {
+    height: auto;
+    padding: 3em 5em;
+    background: linear-gradient(to bottom, #2a3f68 10%, rgba(42, 63, 104, 0.4) 50%, rgba(42, 63, 104, .9) 100%);
+  }
+
+  .pricing-wrapper {
+    background: $white;
+    padding: 5% 10%;
+  }
+
+  .card {
+    h4 {
+      padding: .4em 0;
+    }
+
+    transition: all .5s ease;
+  }
+
+  .card:hover {
+    transform: scale3d(1.1, 1.1, 1);
+    z-index: 1;
+  }
+
+  .card-image img {
+    margin: auto;
+    padding: 1.5em;
+    width: 60%;
+  }
+
+  .card-content {
+    padding: 0px 25px 10px;
+
+    p {
+      justify-content: center;
+    }
+  }
+}

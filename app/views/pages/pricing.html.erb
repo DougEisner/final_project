@@ -1,57 +1,74 @@
-<h1> Pricing Plans </h1>
-
-<div>
-  Tier 1
-  <br>
-  < 100 employees
-  <br>
-  $3,000
-  <br>
-  Annual site license
-  <br>
-
-  <br>
-  -Unlimited downloads
-  <br>
-  -Internal use only
-</div>
-
-<br>
-<br>
-
-<div>
-  Tier 2
-  <br>
-  < 250 employees
-  <br>
-  $5,000
-  <br>
-  Annual site license
-  <br>
-
-  <br>
-  -Unlimited downloads
-  <br>
-  -Internal use only
-</div>
-
- <%= link_to 'License page', license_template_path %>
-
-<br>
-<br>
-
-<div>
-  Tier 3
-  <br>
-  > 250 employees
-  <br>
-  $10,000
-  <br>
-  Annual site license
-  <br>
-
-  <br>
-  -Unlimited downloads
-  <br>
-  -Internal use only
-</div>
+<section id="pricing-page">
+  <div class="parallax-container z-depth-2">
+    <div class="parallax">
+      <%= image_tag("abstract-vectors.png") %>
+    </div>
+    <div class="container">
+      <div class="row white-text center-align">
+        <h1>Choose your plan.</h1>
+        <h5>Hunt by meowing loudly at 5am next to human slave food dispenser cat is love, cat is life for chase laser for kitty poochy meowzer!</h5>
+      </div>
+    </div>
+  </div>
+  <div class="pricing-wrapper">
+    <div class="row">
+      <div class="col s12 l4 tier-1">
+        <div class="card white hoverable">
+          <h4 class="center dark-blue white-text">Tier 1</h4>
+          <div class="card-image">
+            <%= image_tag("system.svg") %>
+          </div>
+          <div class="card-content grey-text center">
+            <h5 class="grey-text text-darken-1">Features</h5>
+            <p class="valign-wrapper"><i class="material-icons">done</i>100 Employees</p>
+            <p class="valign-wrapper"><i class="material-icons">done</i>Annual site license</p>
+            <p class="valign-wrapper"><i class="material-icons">done</i>Unlimited downloads</p>
+            <p class="valign-wrapper"><i class="material-icons">done</i>Internal use only</p>
+            <h3 class="dark-blue-text">$3,000</h3>
+          </div>
+          <div class="center card-action">
+            <%= link_to 'Buy Now', license_template_path, class: "btn waves-effect white-text dark-blue" %>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 l4 tier-2">
+        <div class="card white hoverable">
+          <h4 class="center yellow darken-2 white-text">Tier 2</h4>
+          <div class="card-image">
+            <%= image_tag("astronaut.svg") %>
+          </div>
+          <div class="card-content grey-text center">
+            <h5 class="grey-text text-darken-1">Features</h5>
+            <p class="valign-wrapper"><i class="material-icons">done</i> < 250 Employees</p>
+            <p class="valign-wrapper"><i class="material-icons">done</i>Annual site license</p>
+            <p class="valign-wrapper"><i class="material-icons">done</i>Unlimited downloads</p>
+            <p class="valign-wrapper"><i class="material-icons">done</i>Internal use only</p>
+            <h3 class="yellow-text text-darken-3">$5,000</h3>
+          </div>
+          <div class="center card-action">
+            <%= link_to 'Buy Now', license_template_path, class: "btn waves-effect white-text yellow darken-2" %>
+          </div>
+        </div>
+      </div>
+      <div class="col s12 l4 tier-3">
+        <div class="card white hoverable">
+          <h4 class="center deep-orange darken-3 white-text">Tier 3</h4>
+          <div class="card-image">
+            <%= image_tag("rocket.svg") %>
+          </div>
+          <div class="card-content grey-text center">
+            <h5 class="grey-text text-darken-1">Features</h5>
+            <p class="valign-wrapper"><i class="material-icons">done</i> > 250 Employees</p>
+            <p class="valign-wrapper"><i class="material-icons">done</i>Annual site license</p>
+            <p class="valign-wrapper"><i class="material-icons">done</i>Unlimited downloads</p>
+            <p class="valign-wrapper"><i class="material-icons">done</i>Internal use only</p>
+            <h3 class="deep-orange-text text-darken-3">$10,000</h3>
+          </div>
+          <div class="center card-action">
+            <%= link_to 'Buy Now', license_template_path, class: "btn waves-effect white-text deep-orange darken-3" %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,13 @@
+$primary-blue: rgb(45, 177, 199);
+$dark-blue: #2A3F68;
+$rusted-red: #d84315;  // deep-orange darken-3
+$gold: #fbc02d;        // yellow darken-2
+$black: #2c2c2c;
+$white: #f9f9fb;
+
+.dark-blue {
+  background-color: $dark-blue;
+}
+.dark-blue-text {
+  color: $dark-blue;
+}
