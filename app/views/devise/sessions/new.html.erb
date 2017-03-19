@@ -1,26 +1,39 @@
-<h2>Log in</h2>
+<section id="login" class="white">
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+  <div class="login-wrapper container row z-depth-5">
 
-  <div class="field">
-    <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-  </div>
-
-  <% if devise_mapping.rememberable? -%>
-    <div class="field">
-      <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+    <div class="login-welcome white-text">
+      <h3 class="center">Welcome</h3>
+      <%= render "devise/shared/links" %>
     </div>
-  <% end -%>
 
-  <div class="actions">
-    <%= f.submit "Log in" %>
+    <div class="login-form white">
+      <h3 class="dark-blue-text">Log In</h3>
+
+      <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+      <div class="field">
+        <%= f.label :email %>
+        <%= f.email_field :email, autofocus: true %>
+      </div>
+
+      <div class="field">
+        <%= f.label :password %>
+        <%= f.password_field :password, autocomplete: "off" %>
+      </div>
+
+      <% if devise_mapping.rememberable? -%>
+      <div class="field">
+        <%= f.check_box :remember_me %>
+        <%= f.label :remember_me %>
+      </div>
+      <% end -%>
+
+      <div class="actions">
+        <%= f.submit "Log In", :class => 'btn waves-effect waves-orange deep-orange darken-3' %>
+      </div>
+      <% end %>
+
+    </div>
   </div>
-<% end %>
 
-<%= render "devise/shared/links" %>
+</section>
