@@ -1,40 +1,33 @@
 
 #login {
   margin-top: -45px;
-  padding: 50px 0 10% 0;
+  padding: 5rem 0 10% 0;
 
   h3 {
-    margin-top: 0;
+    margin: 0;
   }
 
   .login-wrapper {
-    display: flex;
-    flex-flow: row wrap;
-    height: calc(100vh - 50%);
-    margin-top: 20px;
+    float: none;
+    margin: 0 auto;
+    padding: 0;
   }
 
   .login-welcome {
     background-image: url("navy-splash.png");
     background-size: cover;
-    display: flex;
-    flex-flow: column nowrap;
-    flex: 1 1 40%;
-    justify-content: space-between;
     padding: 2em;
   }
 
   .login-links a {
-    color: $white;
+    color: $dark-blue;
     font-weight: 200;
   }
 
   .login-form {
-    display: flex;
-    flex-flow: column nowrap;
-    flex: 1 1 60%;
-    justify-content: space-between;
     padding: 2em;
+    display: flex;
+    flex-flow: column wrap;
 
     form {
       display: flex;

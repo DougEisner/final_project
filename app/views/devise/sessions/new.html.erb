@@ -1,14 +1,10 @@
-<section id="login" class="white">
-
-  <div class="login-wrapper container row z-depth-5">
-
+<section id="login" class="white row">
+  <div class="login-wrapper z-depth-5 col s10 m8 l5">
     <div class="login-welcome white-text">
-      <h3 class="center">Welcome</h3>
-      <%= render "devise/shared/links" %>
+      <h3 class="center white-text">Log In</h3>
     </div>
 
     <div class="login-form white">
-      <h3 class="dark-blue-text">Log In</h3>
 
       <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
       <div class="field">
@@ -33,7 +29,7 @@
       </div>
       <% end %>
 
+      <%= render "devise/shared/links" %>
     </div>
   </div>
-
 </section>
