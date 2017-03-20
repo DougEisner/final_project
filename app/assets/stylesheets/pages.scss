@@ -56,7 +56,10 @@ nav {
 
 #search {
   background-color: white;
+  margin-left: auto;
+  margin-right: 15px;
   position: relative;
+  width: 37rem;
   z-index: 9;
 
   .input-field {
