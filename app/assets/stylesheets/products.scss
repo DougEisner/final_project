@@ -42,7 +42,7 @@
     padding: 0;
 
     h3 {
-      margin: 0 0 0 35px;
+      margin: 0 1em;
       font-size: 1.7rem;
     }
 
@@ -51,7 +51,6 @@
       letter-spacing: .7px;
       max-width: 40%;
     }
-
   }
 
   .collapsible-body {
@@ -80,6 +79,18 @@
     a:hover {
       background-color: $light-blue;
       color: white;
+    }
+  }
+}
+
+@media #{$small-and-down} {
+  #products {
+    .collapsible-body {
+      flex-direction: column;
+
+      a.btn-flat {
+        margin: 10px 0 0 0;
+      }
     }
   }
 }
