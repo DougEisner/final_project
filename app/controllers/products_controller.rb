@@ -1,6 +1,8 @@
 class ProductsController < ApplicationController
   before_action :set_product, only: [:show, :edit, :update, :destroy]
 
+  before_action :deny_access, :unless => :is_admin?, except: [:show, :index]
+
   # GET /products
   # GET /products.json
   def index
@@ -69,6 +71,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:title, :developer, :email, :institution, :category, :price)
+      params.require(:product).permit(:title, :developer, :email, :institution, :category, :price, :summary, :detailed_description)
     end
 end

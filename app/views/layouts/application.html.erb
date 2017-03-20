@@ -20,6 +20,11 @@
             <i class="material-icons left">perm_identity</i>
           <% end %>
         </li>
+        <li class="link">
+          <%= link_to destroy_user_session_path, method: :delete do %>Log out
+            <i class="material-icons left">perm_identity</i>
+          <% end %>
+        </li>
         <li><%= link_to 'Get Started', new_user_registration_path, class: 'waves-effect btn-flat' %></li>
       </ul>
     </div>

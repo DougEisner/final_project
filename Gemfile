@@ -7,6 +7,8 @@ end
 
 gem 'paperclip'
 
+gem 'aws-sdk', '~> 2.3'
+
 gem 'materialize-sass'
 
 gem 'stripe'
