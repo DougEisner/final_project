@@ -1,12 +1,10 @@
-<section id="splash" class="parallax-container z-depth-2">
-  <div class="parallax">
-    <%= image_tag("abstract-vectors.png") %>
-  </div>
+<section id="splash" class="z-depth-1 valign-wrapper">
   <div class="container">
-    <div class="row white-text center-align">
+    <%= image_tag("tech.svg", class: 'tech-image hide-on-med-and-down') %>
+    <div class="splash-message white-text center-align">
         <h1>Data at your fingertips.</h1>
         <h5>Our goal is to provide greater access to data and software produced in leading research institutions across country.</h5>
-        <%= image_tag("tech.svg", class: 'tech-image') %>
+        <%= link_to 'Get Started', new_user_registration_path, class: 'btn-flat waves-effect white' %>
     </div>
   </div>
 </section>

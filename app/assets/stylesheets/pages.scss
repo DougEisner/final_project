@@ -4,6 +4,7 @@
 
 html {
   background-color: $dark-blue;
+  box-sizing: border-box;
 }
 
 h4, h5, h6 {
@@ -77,19 +78,38 @@ nav {
 }
 
 #splash {
-  background: linear-gradient(to bottom, rgba(18,155,189,.9) 0%, rgba(47,193,215,0.7) 39%, rgba($dark-blue, .9) 100%);
+  background: linear-gradient(to left, #24cad2 0%, #1380a5 55%, #0a2e76 100%);
   height: 100vh;
   margin-top: -110px;
   padding-top: 110px;
+  width: 100vw;
 
-  h5 {
-    font-weight: 200;
+  .container {
+    display: flex;
+    flex-flow: row wrap;
+    width: 85%;
   }
 
   .tech-image {
-    height: 45vh;
-    margin: 2em;
-    opacity: .8;
+    height: 350px;
+    opacity: .85;
+    flex: 1 1 40%;
+    padding: 1em;
+  }
+
+  .splash-message {
+    flex: 2 1 60%;
+    line-height: 1.8em;
+  }
+
+  .splash-message h5 {
+    margin-bottom: 3em;
+  }
+
+  .splash-message a {
+    height: 4rem;
+    line-height: 2rem;
+    padding: 1rem 6rem;
   }
 }
 
