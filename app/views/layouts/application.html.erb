@@ -11,12 +11,27 @@
   <nav class="transparent z-depth-0">
     <div class="nav-wrapper">
       <%= link_to 'CodeAlliance', root_path, class: 'brand-logo' %>
-      <ul class="right ">
-        <li class="search"><i class="material-icons">search</i></a></li>
-        <li class="link"><%= link_to 'Product', pricing_path %></li>
+
+      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+      <!-- Mobile Side Nav -->
+      <ul class="side-nav" id="mobile-demo">
+        <li class="details blue">
+          <div class="row">
+            <h4>CodeAlliance</h4>
+          </div>
+        </li>
+        <li><%= link_to 'Get Started', new_user_registration_path %></li>
+        <li><%= link_to 'Log In', new_user_session_path %></li>
+        <li><%= link_to 'Pricing', pricing_path %></li>
+        <li><%= link_to 'Products', products_path %></li>
+      </ul>
+
+      <!-- Desktop Nav -->
+      <ul class="right hide-on-med-and-down">
+        <li class="link search"><i class="material-icons">search</i></a></li>
+        <li class="link"><%= link_to 'Products', products_path %></li>
         <li class="link"><%= link_to 'Pricing', pricing_path %></li>
-        <li class="link">
-          <%= link_to new_user_session_path do %>Log In
+        <li class="link"><%= link_to new_user_session_path do %>Log In
             <i class="material-icons left">perm_identity</i>
           <% end %>
         </li>
@@ -27,12 +42,13 @@
         </li>
         <li><%= link_to 'Get Started', new_user_registration_path, class: 'waves-effect btn-flat' %></li>
       </ul>
+
     </div>
   </nav>
 
-  <form id="search" class="scale-transition scale-out">
+  <form id="search" class="scale-transition scale-out z-depth-1">
     <div class="input-field valign-wrapper">
-      <input type="search" required>
+      <input type="search" placeholder="Search for databases here" required>
       <label class="label-icon" for="search"><i class="material-icons">search</i></label>
       <i class="material-icons close">close</i>
     </div>
@@ -76,7 +92,7 @@
     </div>
     <div class="footer-copyright">
       <div class="container">
-      © 2014 Copyright Text
+      Copyright Text
       <a class="grey-text text-lighten-4 right" href="#!"></a>
       </div>
     </div>
