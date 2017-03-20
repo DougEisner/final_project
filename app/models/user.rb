@@ -6,7 +6,7 @@ class User < ApplicationRecord
 
   ENTITY = [['Select Entity Size', 0], ['< 50', 1], ['50 > 250', 2], ['> 250', 3]]
 
-  RESEARCHAREA = [['Select Reseach Area', 'Select Reseach Area'], 
+  RESEARCHAREA = [['Select Reseach Area', 'Select Reseach Area'],
   ['Biology', 'Biology'], ['Chemistry', 'Chemistry'],
   ['Fishery', 'Fishery'], ['Animal Genetics', 'Animal Genetics']]
 
@@ -15,4 +15,5 @@ class User < ApplicationRecord
   end
 
   has_many :licenses
+  has_many :CTD_downloads
 end
