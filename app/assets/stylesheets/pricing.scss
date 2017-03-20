@@ -1,9 +1,10 @@
 #pricing-page {
+  margin-top: -40px;
 
   .parallax-container {
     height: auto;
-    padding: 1em 5em;
-    background: linear-gradient(to bottom, #2a3f68 10%, rgba(42, 63, 104, 0.4) 50%, rgba(42, 63, 104, .9) 100%);
+    padding: 4em 5em;
+    background: linear-gradient(to bottom, $dark-blue 0%, rgba(42, 63, 104, 0.8) 40%, rgba(42, 63, 104, .9) 100%);
   }
 
   .pricing-wrapper {
@@ -36,5 +37,17 @@
     p {
       justify-content: center;
     }
+  }
+
+  .tier-1 .btn {
+    background-color: $medium-blue;
+  }
+
+  .tier-2 .btn {
+    background-color: $gold;
+  }
+
+  .tier-3 .btn {
+    background-color: $rusted-red;
   }
 }

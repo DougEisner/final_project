@@ -2,6 +2,7 @@ $(document).on('turbolinks:load', function() {
   $('.parallax').parallax();
   $(".dropdown-button").dropdown();
   $(".button-collapse").sideNav();
+  $('.collapsible').collapsible();
 
   var searchIcon = document.querySelector('.search');
   var $searchForm = $('#search');
