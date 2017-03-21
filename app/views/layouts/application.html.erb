@@ -8,13 +8,15 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
  <body>
-  <nav class="transparent z-depth-0">
+  <nav class="white z-depth-0">
     <div class="nav-wrapper">
-      <%= link_to 'CodeAlliance', root_path, class: 'brand-logo' %>
+      <%= link_to 'CodeAlliance', root_path, class: 'logo light-blue-text text-darken-3' %>
 
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <!-- Mobile Side Nav -->
-      <ul class="side-nav" id="mobile-demo">
+      <a href="#" data-activates="mobile-demo" class="button-collapse">
+        <i class="material-icons link">menu</i>
+      </a>
+      <ul class="side-nav light-blue-text text-darken-3" id="mobile-demo">
         <li class="details blue">
           <div class="row">
             <h4>CodeAlliance</h4>
@@ -28,7 +30,7 @@
 
       <!-- Desktop Nav -->
       <ul class="right hide-on-med-and-down">
-        <li class="link search"><i class="material-icons">search</i></a></li>
+        <li class="search"><a class="link"><i class="material-icons">search</i></a></li>
         <li class="link"><%= link_to 'Products', products_path %></li>
         <li class="link"><%= link_to 'Pricing', pricing_path %></li>
         <li class="link"><%= link_to new_user_session_path do %>Log In
@@ -40,21 +42,21 @@
             <i class="material-icons left">perm_identity</i>
           <% end %>
         </li>
-        <li><%= link_to 'Get Started', new_user_registration_path, class: 'waves-effect btn-flat' %></li>
+        <li><%= link_to 'Get Started', new_user_registration_path, class: 'btn-flat' %></li>
       </ul>
 
     </div>
   </nav>
 
-  <form id="search" class="scale-transition scale-out z-depth-1">
+  <!-- <form id="search" class="scale-transition scale-out z-depth-1">
     <div class="input-field valign-wrapper">
       <input type="search" placeholder="Search for databases here" required>
       <label class="label-icon" for="search"><i class="material-icons">search</i></label>
       <i class="material-icons close">close</i>
     </div>
-  </form>
+  </form> -->
 
-   <div class="container">
+   <div class="alert">
      <% flash.each do |key, value| %>
        <div class="alert alert-<%= key %>">
          <%= value %>
