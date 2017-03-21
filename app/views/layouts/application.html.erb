@@ -4,13 +4,14 @@
     <title>CodeAlliance</title>
     <%= csrf_meta_tags %>
     <%= stylesheet_link_tag "https://fonts.googleapis.com/icon?family=Material+Icons" %>
+    <link href="https://fonts.googleapis.com/css?family=Play:700:400" rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
  <body>
   <nav class="white z-depth-0">
     <div class="nav-wrapper">
-      <%= link_to 'CodeAlliance', root_path, class: 'logo light-blue-text text-darken-3' %>
+      <%= link_to 'Catalyst Research', root_path, class: 'logo light-blue-text text-darken-3' %>
 
       <!-- Mobile Side Nav -->
       <a href="#" data-activates="mobile-demo" class="button-collapse">
@@ -19,10 +20,10 @@
       <ul class="side-nav light-blue-text text-darken-3" id="mobile-demo">
         <li class="details blue">
           <div class="row">
-            <h4>CodeAlliance</h4>
+            <h4>Catalyst Research</h4>
           </div>
         </li>
-        <li><%= link_to 'Get Started', new_user_registration_path %></li>
+        <li><%= link_to 'Register', new_user_registration_path %></li>
         <li><%= link_to 'Log In', new_user_session_path %></li>
         <li><%= link_to 'Pricing', pricing_path %></li>
         <li><%= link_to 'Products', products_path %></li>
@@ -30,31 +31,30 @@
 
       <!-- Desktop Nav -->
       <ul class="right hide-on-med-and-down">
-        <li class="search"><a class="link"><i class="material-icons">search</i></a></li>
-        <li class="link"><%= link_to 'Products', products_path %></li>
-        <li class="link"><%= link_to 'Pricing', pricing_path %></li>
-        <li class="link"><%= link_to new_user_session_path do %>Log In
+        <li class="link"><%= link_to 'Search', products_path %></li>
+        <li class="link"><%= link_to 'Data', products_path %></li>
+        <li class="link"><%= link_to 'Software', products_path %></li>
+
+        <% if user_signed_in? %>
+          <li class="link">
+            <%= link_to destroy_user_session_path, method: :delete do %>Log out
             <i class="material-icons left">perm_identity</i>
-          <% end %>
-        </li>
-        <li class="link">
-          <%= link_to destroy_user_session_path, method: :delete do %>Log out
-            <i class="material-icons left">perm_identity</i>
-          <% end %>
-        </li>
-        <li><%= link_to 'Get Started', new_user_registration_path, class: 'btn-flat' %></li>
+            <% end %>
+          </li>
+
+          <% else %>
+          <li class="link"><%= link_to new_user_session_path do %>Log In
+              <i class="material-icons left">perm_identity</i>
+            <% end %>
+          </li>
+        <% end %>
+
+
+        <li class="link"><%= link_to 'Register', new_user_registration_path, class: 'btn-flat' %></li>
       </ul>
 
     </div>
   </nav>
-
-  <!-- <form id="search" class="scale-transition scale-out z-depth-1">
-    <div class="input-field valign-wrapper">
-      <input type="search" placeholder="Search for databases here" required>
-      <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-      <i class="material-icons close">close</i>
-    </div>
-  </form> -->
 
    <div class="alert">
      <% flash.each do |key, value| %>
