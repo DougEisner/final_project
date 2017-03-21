@@ -24,3 +24,37 @@ class ChargesController < ApplicationController
     redirect_to new_charge_path
   end
 end
+
+###############
+
+# def create
+#   @order = Order.new(order_params)
+#   charge_error = nil
+#
+#   if @order.valid?
+#     begin
+#       customer = Stripe::Customer.create(
+#         :email => 'example@stripe.com',
+#         :card  => params[:stripeToken])
+#
+#       charge = Stripe::Charge.create(
+#         :customer    => customer.id,
+#         :amount      => 5000,
+#         :description => 'Rails Stripe customer',
+#         :currency    => 'usd')
+#
+#     rescue Stripe::CardError => e
+#       charge_error = e.message
+#     end
+#     if charge_error
+#       flash[:error] = charge_error
+#       render :new
+#     else
+#       @order.save
+#       redirect_to (successful page)
+#     end
+#   else
+#     flash[:error] = 'one or more errors in your order'
+#     render :new
+#   end
+# end

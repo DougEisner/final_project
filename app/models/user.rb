@@ -6,6 +6,8 @@ class User < ApplicationRecord
 
   ENTITY = [['Select Entity Size', 0], ['< 50', 1], ['50 > 250', 2], ['> 250', 3]]
 
+  ROLES = [['Academic', 'academic'], ['Business', 'business'], ['Other', 'other']]
+
   RESEARCHAREA = [['Select Reseach Area', 'Select Reseach Area'],
   ['Biology', 'Biology'], ['Chemistry', 'Chemistry'],
   ['Fishery', 'Fishery'], ['Animal Genetics', 'Animal Genetics']]
