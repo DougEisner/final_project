@@ -1,12 +1,10 @@
-<section id="splash" class="parallax-container z-depth-2">
-  <div class="parallax">
-    <%= image_tag("abstract-vectors.png") %>
-  </div>
+<section id="splash" class="z-depth-1 valign-wrapper">
   <div class="container">
-    <div class="row white-text center-align">
+    <%= image_tag("tech.svg", class: 'tech-image hide-on-med-and-down') %>
+    <div class="splash-message white-text center-align">
         <h1>Data at your fingertips.</h1>
         <h5>Our goal is to provide greater access to data and software produced in leading research institutions across country.</h5>
-        <%= image_tag("tech.svg", class: 'tech-image') %>
+        <%= link_to 'Get Started', new_user_registration_path, class: 'btn waves-effect' %>
     </div>
   </div>
 </section>
@@ -51,6 +49,50 @@
           Eliminate reliance on integration specialists. Foster a self service philosophy and let the IT focus on business critical activities.
         </p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="customers">
+  <div class="container">
+    <div class="row">
+
+      <div class="col s12 m4">
+        <div class="card row white">
+          <div class="col l3">
+            <%= image_tag("book.svg", class: "hide-on-med-and-down") %>
+          </div>
+          <div class="col m12 l9 teal-text text-lighten-2">
+            <span><h6>CodeAlliance for Academics</h6><i class="material-icons right">trending_flat</i></h6></span>
+            <p>Kitty Ipsum and more info here about the specific user</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+        <div class="card row white">
+          <div class="col l3">
+            <%= image_tag("finances.svg", class: "hide-on-med-and-down") %>
+          </div>
+          <div class="col m12 l9 blue-text text-lighten-1">
+            <span><h6>CodeAlliance for Business</h6><i class="material-icons right">trending_flat</i></h6></span>
+            <p>Kitty Ipsum and more info here about the specific user</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="col s12 m4">
+        <div class="card row white">
+          <div class="col l3">
+            <%= image_tag("globe.svg", class: "hide-on-med-and-down") %>
+          </div>
+          <div class="col m12 l9 indigo-text text-lighten-2">
+            <span><h6>CodeAlliance for Enterprise</h6><i class="material-icons right">trending_flat</i></h6></span>
+            <p>Kitty Ipsum and more info here about the specific user</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>

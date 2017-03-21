@@ -13,74 +13,29 @@
 
   <div class="products-container">
     <ul class="collapsible popout" data-collapsible="accordion">
-
-      <li class="col s12 m7">
-        <div class="card horizontal collapsible-header">
-          <div class="card-image valign-wrapper">
-            <%= image_tag("CTD.jpg") %>
+      <% @products.each do |product| %>
+        <li class="col s12 m7">
+          <div class="card horizontal collapsible-header">
+            <div class="card-image valign-wrapper">
+              <%= image_tag("CTD.jpg") %>
+            </div>
+            <div class="card-content">
+              <h3 class="grey-text text-darken-4"><%= product.title %></h3>
+              <p class="grey-text hide-on-small-only	">The CTD database is a powerful tool for toxicogenomics research.</p>
+              <span><%= product.category %></span>
+            </div>
           </div>
-          <div class="card-content">
-            <h3 class="grey-text text-darken-4">CTD</h3>
-            <p class="grey-text hide-on-small-only	">The CTD database is a powerful tool for toxicogenomics research.</p>
-            <span>Chemistry</span>
+          <div class="row collapsible-body">
+            <span class="col s12">Provides manually curated data on exposure information, chemical-gene-phenotype-disease relationships and tools to analyze these integrated data sets.  Represents a unique centralization of data that is key to understanding and predicting toxicity of chemical compounds including both environmental compounds and drugs.
+            Provides unique dataset - no other curated databases that directly address mechanisms by which chemicals may relate to diseases that are publicly available.
+            Expansion of  meta-analysis capabilities of software tools for toxicity of chemical compounds (both environmental and drugs)  Improvement of toxicity predictions for drug developers.
+            Generally: Understanding the mechanisms by which environmental chemicals or drugs alter molecular pathways related to diseases. Understanding these pathways can improve prevention of exposure-related disorders, identify biomarkers of disease, or fine-tune targets for treatment of implicated diseases.
+            Value has already been proven in the research arena, hence the interests from commercial entities after 13+ years of expert curation
+            </span>
+            <a class="btn-flat waves-effect waves-light col s12">Choose</a>
           </div>
-        </div>
-        <div class="row collapsible-body">
-          <span class="col s12">Provides manually curated data on exposure information, chemical-gene-phenotype-disease relationships and tools to analyze these integrated data sets.  Represents a unique centralization of data that is key to understanding and predicting toxicity of chemical compounds including both environmental compounds and drugs.
-          Provides unique dataset - no other curated databases that directly address mechanisms by which chemicals may relate to diseases that are publicly available.
-          Expansion of  meta-analysis capabilities of software tools for toxicity of chemical compounds (both environmental and drugs)  Improvement of toxicity predictions for drug developers.
-          Generally: Understanding the mechanisms by which environmental chemicals or drugs alter molecular pathways related to diseases. Understanding these pathways can improve prevention of exposure-related disorders, identify biomarkers of disease, or fine-tune targets for treatment of implicated diseases.
-          Value has already been proven in the research arena, hence the interests from commercial entities after 13+ years of expert curation
-          </span>
-          <a class="btn-flat waves-effect waves-light col s12">Choose</a>
-        </div>
-      </li>
-
-      <li class="col s12 m7">
-        <div class="card horizontal collapsible-header">
-          <div class="card-image valign-wrapper">
-            <%= image_tag("CTD.jpg") %>
-          </div>
-          <div class="card-content">
-            <h3 class="grey-text text-darken-4">CTD</h3>
-            <p class="grey-text hide-on-small-only	">The CTD database is a powerful tool for toxicogenomics research.</p>
-            <span>Chemistry</span>
-          </div>
-        </div>
-        <div class="row collapsible-body">
-          <span class="col s12">Provides manually curated data on exposure information, chemical-gene-phenotype-disease relationships and tools to analyze these integrated data sets.  Represents a unique centralization of data that is key to understanding and predicting toxicity of chemical compounds including both environmental compounds and drugs.
-          Provides unique dataset - no other curated databases that directly address mechanisms by which chemicals may relate to diseases that are publicly available.
-          Expansion of  meta-analysis capabilities of software tools for toxicity of chemical compounds (both environmental and drugs)  Improvement of toxicity predictions for drug developers.
-          Generally: Understanding the mechanisms by which environmental chemicals or drugs alter molecular pathways related to diseases. Understanding these pathways can improve prevention of exposure-related disorders, identify biomarkers of disease, or fine-tune targets for treatment of implicated diseases.
-          Value has already been proven in the research arena, hence the interests from commercial entities after 13+ years of expert curation
-          </span>
-          <a class="btn-flat waves-effect waves-light col s12">Choose</a>
-        </div>
-      </li>
-
-      <li class="col s12 m7">
-        <div class="card horizontal collapsible-header">
-          <div class="card-image valign-wrapper">
-            <%= image_tag("CTD.jpg") %>
-          </div>
-          <div class="card-content">
-            <h3 class="grey-text text-darken-4">CTD</h3>
-            <p class="grey-text hide-on-small-only	">The CTD database is a powerful tool for toxicogenomics research.</p>
-            <span>Chemistry</span>
-          </div>
-        </div>
-        <div class="row collapsible-body">
-          <span class="col s12">Provides manually curated data on exposure information, chemical-gene-phenotype-disease relationships and tools to analyze these integrated data sets.  Represents a unique centralization of data that is key to understanding and predicting toxicity of chemical compounds including both environmental compounds and drugs.
-          Provides unique dataset - no other curated databases that directly address mechanisms by which chemicals may relate to diseases that are publicly available.
-          Expansion of  meta-analysis capabilities of software tools for toxicity of chemical compounds (both environmental and drugs)  Improvement of toxicity predictions for drug developers.
-          Generally: Understanding the mechanisms by which environmental chemicals or drugs alter molecular pathways related to diseases. Understanding these pathways can improve prevention of exposure-related disorders, identify biomarkers of disease, or fine-tune targets for treatment of implicated diseases.
-          Value has already been proven in the research arena, hence the interests from commercial entities after 13+ years of expert curation
-          </span>
-          <a class="btn-flat waves-effect waves-light col s12">Choose</a>
-        </div>
-      </li>
-
-
+        </li>
+      <% end %>
     </ul>
   </div>
 
