@@ -30,7 +30,10 @@
   <%= @product.detailed_description %>
 </p>
 
-
+<p>
+  <strong>Image:</strong>
+  <img src="<%= @product.image.url(:medium) %>" alt="<%= @product.title %>" />
+</p>
 
 <p>
   <strong>Category:</strong>
