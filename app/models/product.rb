@@ -2,10 +2,9 @@ class Product < ApplicationRecord
   has_many :licenses
   has_many :CTD_downloads
 
-<<<<<<< HEAD
   has_attached_file :image, styles: { medium: "100x100" }
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
-=======
+
   # has_attached_file :image,
   #                  styles: { medium: "640x" },
   #                  storage: :s3,
@@ -20,5 +19,4 @@ class Product < ApplicationRecord
      secret_access_key: ENV['S3_SECRET_ACCESS_KEY']
    }
  end
->>>>>>> 9d00bb29bab13b38206a6fd075d49ca2d652b2fc
 end
