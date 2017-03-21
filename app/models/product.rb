@@ -3,12 +3,12 @@ class Product < ApplicationRecord
   has_many :licenses
   has_many :CTD_downloads
 
-  has_attached_file :image,
-                   styles: { medium: "640x" },
-                   storage: :s3,
-                   s3_credentials: Product.new{ |a| a.instance.s3_credentials },
-                   s3_region: 'us-east-1'
-  validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
+  # has_attached_file :image,
+  #                  styles: { medium: "640x" },
+  #                  storage: :s3,
+  #                  s3_credentials: Product.new{ |a| a.instance.s3_credentials },
+  #                  s3_region: 'us-east-1'
+  # validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
   def s3_credentials
    {
