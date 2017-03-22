@@ -1,32 +1,27 @@
 
 #login {
-  margin-top: -45px;
-  padding: 5rem 0 10% 0;
-
-  h3 {
-    font-size: 2rem;
-    margin: 0;
-  }
+  background: linear-gradient(to left, $blue 0%, $text-blue 55%, #0a2e76 100%);
+  margin-bottom: 0;
 
   .login-wrapper {
-    float: none;
-    margin: 0 auto;
+    border-radius: 15px;
+    margin-bottom: 2em;
+    margin-top: 2em;
+    overflow: hidden;
     padding: 0;
+
+    h3 {
+      color: #065399;
+      font-family: 'Play';
+      font-size: 2rem;
+      font-weight: 700;
+      margin: 0 0 2em 0;
+    }
   }
 
-  .login-welcome {
-    background-image: url("navy-splash.png");
-    background-size: cover;
-    padding: 2em;
-  }
-
-  .login-links a {
-    color: $medium-blue;
-    font-weight: 200;
-  }
 
   .login-form {
-    padding: 2em;
+    padding: 3em;
     display: flex;
     flex-flow: column wrap;
 
@@ -42,8 +37,56 @@
       font-weight: 300;
     }
 
+    input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 1000px white inset !important;
+    }
+
     .actions {
-      margin: 2em 0 1em;
+      align-items: center;
+      display: flex;
+      justify-content: space-between;
+
+      .btn-flat {
+        margin: 2em 0 1em;
+        border-radius: 5em;
+      }
+
+      i {
+        background-color: white;
+        border: 1px solid $blue;
+        color: $blue;
+        height: 50px;
+        line-height: 50px;
+      }
+
+      i:hover {
+        color: $white;
+        background-color: $blue;
+        border-color: $sky;
+      }
+
+      a {
+        background-color: #2196F3;
+        color: $white;
+        height: 35px;
+        line-height: 35px;
+      }
+
+      a:hover {
+        background-color: $blue;
+        border-color: $sky;
+      }
+    }
+  }
+  .login-footer {
+    margin-bottom: 4em;
+    .login-links a {
+      color: $sky;
+      font-family: 'Play', sans-serif;
+
+      &:hover {
+        color: $snow;
+      }
     }
   }
 }
