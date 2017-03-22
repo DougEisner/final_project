@@ -36,7 +36,7 @@
     <%= f.select :entity_size, User::ENTITY %>
   </div>
 
-<% elsif  [[[ for academic ]]] %>
+<%# elsif  [[[ for academic ]]] %>
   <div class="form-group">
     <%= f.text_field :organization, class: 'form-control', placeholder: 'University'  %>
   </div>
@@ -60,5 +60,5 @@
 
 <%= f.submit "Sign up", class: 'btn btn-primary' %>
 <% end %>
-<
+
 <%= render "devise/shared/links" %>

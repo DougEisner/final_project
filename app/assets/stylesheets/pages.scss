@@ -3,12 +3,18 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 html {
-  background-color: $dark-blue;
+  background-color: $white;
   box-sizing: border-box;
 }
 
-h5 {
-  font-weight: 200;
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 p {
@@ -18,21 +24,20 @@ p {
 
 nav {
   border-bottom: 1px solid $border-shadow;
-  font-family: 'Nobile', sans-serif;
+  font-family: 'Play', sans-serif;
+  font-weight: 700;
   padding: 0 2rem;
   position: relative;
   z-index: 999;
 
   .logo {
     font-size: 2rem;
-    font-weight: 700;
   }
 
   .link a {
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: $text-blue;
     text-transform: uppercase;
-    font-weight: 700;
   }
 
   .link:hover {
@@ -143,7 +148,9 @@ nav {
 }
 
 footer {
+  background-color: $dark-blue;
   font-weight: 200;
+  padding-top: 20px;
 }
 
 @media #{$medium-and-down} {
