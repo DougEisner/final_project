@@ -1,6 +1,6 @@
 <section id="products">
   <div class="products-container">
-    <h2 class="center">Choose a Product</h2>
+    <h2 class="center">Product Results</h2>
     <ul class="collapsible popout" data-collapsible="accordion">
       <% @products.each do |product| %>
         <li class="col s12 m7">
@@ -8,7 +8,7 @@
             <div class="card-content">
               <h3 class="grey-text text-darken-4"><%= product.title %></h3>
               <h4><%= product.developer %></h4>
-              <p class="grey-text hide-on-small-onl"><%= product.summary %>Provides manually curated data on exposure information, chemical-gene-phenotype-disease relationships and tools to analyze these integrated data sets.</p>
+              <p class="grey-text hide-on-small-onl"><%= product.summary %></p>
             </div>
             <a class="btn-flat waves-effect waves-light col s12">Choose</a>
           </div>

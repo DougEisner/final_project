@@ -17,3 +17,16 @@ class CtdDownloadsController < ApplicationController
       params.require(:ctd_download).permit(:user_id, :download)
     end
 end
+
+
+Example
+$("button").click(function(){
+    $.post(url"/ctd_downloads",
+    {
+        ctd_downloads[user_id]: user_id
+        ctd_downloads[download]: download
+    },
+    function(data, status){
+        alert("Data: " + data + "\nStatus: " + status);
+    });
+});
