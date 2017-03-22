@@ -1,7 +1,7 @@
 class CtdDownloadsController < ApplicationController
 
   skip_before_action :verify_authenticity_token, :only => [:create, :index]
-  
+
   def index
     @ctd_downloads = CtdDownload.search(params[:search])
   end
