@@ -3,9 +3,9 @@ class CtdDownload < ApplicationRecord
 
   def self.search(search)
     if search
-      find(:all, :conditions => ['download LIKE ?', "%#{search}%"])
+      where('download ILIKE ?', "%#{search}%")
     else
-      find(:all)
+      CtdDownload.all
     end
   end
 end

@@ -1,0 +1,20 @@
+<h1> CTD Downloads Table </h1>
+
+<table>
+ <thead>
+   <tr>
+     <th>User ID:</th>
+     <th>Download</th>
+     <th colspan="2"></th>
+   </tr>
+ </thead>
+
+<tbody>
+<% @ctd_downloads.each do |download| %>
+  <tr>
+    <td><%= download.user_id %></td>
+    <td><%= download.download %></td>
+  </tr>
+<% end %>
+</tbody>
+</table>
