@@ -10,6 +10,8 @@ class CtdController < Devise::RegistrationsController
   def create
     @user = User.new(params.require(:user).permit(:name, :email, :password,
       :password_confirmation, :research_area, :contact_phone, :entity_size, :organization, :role))
+    # Academic users will be confirmed upon creation.  Not required to click email.
+    @user.skip_confirmation!
 
     if @user.save
       render json: { message: 'User successfully created' }, status: 201
