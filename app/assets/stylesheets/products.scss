@@ -1,13 +1,37 @@
 // Place all the styles related to the Products controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#search-container {
+  background: linear-gradient(to left, $blue 0%, $text-blue 55%, #0a2e76 100%);
+  padding: 5rem 0 10rem 0;
+
+  h5 {
+    color: $snow;
+    font-family: 'Play', sans-serif;
+  }
+  form {
+    border-radius: 5em;
+    overflow: hidden;
+
+    .input-field {
+      margin: 0;
+
+      input {
+        border: none;
+        margin: 0;
+      }
+
+      .material-icons {
+        position: relative;
+      }
+    }
+  }
+}
 
 #products {
-  margin-top: -45px;
-
   .products-container {
     background-color: $white;
-    padding: 8% 10%;
+    padding: 5% 10%;
     width: 100%;
 
     h2 {

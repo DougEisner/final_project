@@ -1,6 +1,16 @@
+<section id="search-container" class="row">
+  <h5 class="center">Search for Product</h5>
+  <form class="white col l6 offset-l3">
+    <div class="input-field valign-wrapper">
+      <input id="search" type="search" required>
+      <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+      <i class="material-icons">close</i>
+    </div>
+  </form>
+</section>
+
 <section id="products">
   <div class="products-container">
-    <h2 class="center">Choose a Product</h2>
     <ul class="collapsible popout" data-collapsible="accordion">
       <% @products.each do |product| %>
         <li class="col s12 m7">
