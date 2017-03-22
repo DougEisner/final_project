@@ -7,8 +7,14 @@ html {
   box-sizing: border-box;
 }
 
-h5 {
-  font-weight: 200;
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
 }
 
 p {

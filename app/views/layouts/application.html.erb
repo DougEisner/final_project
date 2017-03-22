@@ -8,34 +8,35 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
- <body>
-  <nav class="white z-depth-0">
-    <div class="nav-wrapper">
-      <%= link_to 'Catalyst Research', root_path, class: 'logo light-blue-text text-darken-3' %>
+<body>
+  <header>
+    <nav class="white z-depth-0">
+      <div class="nav-wrapper">
+        <%= link_to 'Catalyst Research', root_path, class: 'logo light-blue-text text-darken-3' %>
 
-      <!-- Mobile Side Nav -->
-      <a href="#" data-activates="mobile-demo" class="button-collapse">
-        <i class="material-icons link">menu</i>
-      </a>
-      <ul class="side-nav light-blue-text text-darken-3" id="mobile-demo">
-        <li class="details blue">
-          <div class="row">
-            <h4>Catalyst Research</h4>
-          </div>
-        </li>
-        <li><%= link_to 'Register', new_user_registration_path %></li>
-        <li><%= link_to 'Log In', new_user_session_path %></li>
-        <li><%= link_to 'Pricing', pricing_path %></li>
-        <li><%= link_to 'Products', products_path %></li>
-      </ul>
+        <!-- Mobile Side Nav -->
+        <a href="#" data-activates="mobile-demo" class="button-collapse">
+          <i class="material-icons link">menu</i>
+        </a>
+        <ul class="side-nav light-blue-text text-darken-3" id="mobile-demo">
+          <li class="details blue">
+            <div class="row">
+              <h4>Catalyst Research</h4>
+            </div>
+          </li>
+          <li><%= link_to 'Register', new_user_registration_path %></li>
+          <li><%= link_to 'Log In', new_user_session_path %></li>
+          <li><%= link_to 'Pricing', pricing_path %></li>
+          <li><%= link_to 'Products', products_path %></li>
+        </ul>
 
-      <!-- Desktop Nav -->
-      <ul class="right hide-on-med-and-down">
-        <li class="link"><%= link_to 'Search', products_path %></li>
-        <li class="link"><%= link_to 'Data', products_path %></li>
-        <li class="link"><%= link_to 'Software', products_path %></li>
+        <!-- Desktop Nav -->
+        <ul class="right hide-on-med-and-down">
+          <li class="link"><%= link_to 'Search', products_path %></li>
+          <li class="link"><%= link_to 'Data', products_path %></li>
+          <li class="link"><%= link_to 'Software', products_path %></li>
 
-        <% if user_signed_in? %>
+          <% if user_signed_in? %>
           <li class="link">
             <%= link_to destroy_user_session_path, method: :delete do %>Log out
             <i class="material-icons left">perm_identity</i>
@@ -44,27 +45,31 @@
 
           <% else %>
           <li class="link"><%= link_to new_user_session_path do %>Log In
-              <i class="material-icons left">perm_identity</i>
+            <i class="material-icons left">perm_identity</i>
             <% end %>
           </li>
-        <% end %>
+          <% end %>
 
 
-        <li class="link"><%= link_to 'Register', new_user_registration_path, class: 'btn-flat' %></li>
-      </ul>
+          <li class="link"><%= link_to 'Register', new_user_registration_path, class: 'btn-flat' %></li>
+        </ul>
 
+      </div>
+    </nav>
+  </header>
+  
+  <main>
+    <div class="alert">
+      <% flash.each do |key, value| %>
+      <div class="alert alert-<%= key %>">
+        <%= value %>
+      </div>
+      <% end %>
     </div>
-  </nav>
 
-   <div class="alert">
-     <% flash.each do |key, value| %>
-       <div class="alert alert-<%= key %>">
-         <%= value %>
-       </div>
-     <% end %>
-   </div>
+    <%= yield %>
 
-  <%= yield %>
+  </main>
 
   <footer>
     <div class="container">
@@ -92,16 +97,7 @@
         </div>
       </div>
     </div>
-    <div class="footer-copyright">
-      <div class="container">
-      Copyright Text<div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-
-      <div>Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></div>
-      <a class="grey-text text-lighten-4 right" href="#!"></a>
-      </div>
-    </div>
   </footer>
-
-
- </body>
+</body>
 </html>
+<!-- Icons made by <a href="http://www.freepik.com" title="Freepik">Freepik</a> from <a href="http://www.flaticon.com" title="Flaticon">www.flaticon.com</a> is licensed by <a href="http://creativecommons.org/licenses/by/3.0/" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a> -->
