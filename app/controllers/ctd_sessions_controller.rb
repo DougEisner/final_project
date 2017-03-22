@@ -22,14 +22,16 @@ class CtdSessionsController < Devise::SessionsController
      # Authentication
     @user = User.find_by(email: email)
 
+    # CTD Academic user
     if @user
       if @user.valid_password? password
+        # Currently academic accounts confirmed on creation.
         if @user.confirmed_at.nil?
           render json: { message: 'Be sure account has been confirmed' }, status: 401
         else
           sign_in(resource_name, @user)
-          cookies['_code_alliance_reg'] = { value: JSON.dump({ role: @user.role, email: @user.email }),
-            expires: cookie_expiration(@user) }
+          cookies['_code_alliance_reg'] = { value: { id: @user.id, role: @user.role, email: @user.email,
+           expires: cookie_expiration(@user) }}
           render json: { message: 'User successfully signed in' }, status: 200
         end
       else
