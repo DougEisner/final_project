@@ -1,39 +1,40 @@
-<section id="search-container" class="row">
+<div class="products-wrapper row">
+
   <h5 class="center">Search for Product</h5>
-  <form class="white col l6 offset-l3">
+  <form class="white col s18 offset-s2 m8 offset-m2 l6 offset-l3">
     <div class="input-field valign-wrapper">
       <input id="search" type="search" required>
       <label class="label-icon" for="search"><i class="material-icons">search</i></label>
       <i class="material-icons">close</i>
     </div>
   </form>
-</section>
 
-<section id="products">
-  <div class="products-container">
-    <ul class="collapsible popout" data-collapsible="accordion">
+  <section id="products" class="col s10 offset-s1">
+    <ul>
       <% @products.each do |product| %>
-        <li class="col s12 m7">
-          <div class="card collapsible-header">
-            <div class="card-content">
-              <h3 class="grey-text text-darken-4"><%= product.title %></h3>
-              <h4><%= product.developer %></h4>
-              <p class="grey-text hide-on-small-onl"><%= product.summary %>Provides manually curated data on exposure information, chemical-gene-phenotype-disease relationships and tools to analyze these integrated data sets.</p>
-            </div>
-            <a class="btn-flat waves-effect waves-light col s12">Choose</a>
+      <li class="col s12 m7">
+        <div class="card">
+          <div class="card-content">
+            <h3 class="grey-text text-darken-4"><%= product.title %></h3>
+            <h4><%= product.developer %></h4>
+            <h6><%= product.institution %></h6>
+            <p class="grey-text hide-on-small-onl"><%= product.summary %></p>
           </div>
-        </li>
+          <a class="btn-flat waves-effect waves-light col s12">Learn More</a>
+        </div>
+      </li>
       <% end %>
     </ul>
-  </div>
 
-  <% if is_admin? %>
+    <% if is_admin? %>
     <%= link_to 'Show', product_path %>
     <%= link_to 'Edit', edit_product_path(product) %>
     <%= link_to 'Destroy', product_path, method: :delete, data: { confirm: 'Are you sure?' } %>
     <%= link_to 'New Product', new_product_path %>
-  <% end %>
+    <% end %>
 
-  <p id="notice"><%= notice %></p>
+    <p id="notice"><%= notice %></p>
 
-</section>
+  </section>
+
+</div>
