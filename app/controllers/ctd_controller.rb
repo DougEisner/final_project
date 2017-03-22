@@ -10,10 +10,11 @@ class CtdController < Devise::RegistrationsController
   def create
     @user = User.new(params.require(:user).permit(:name, :email, :password,
       :password_confirmation, :research_area, :contact_phone, :entity_size, :organization, :role))
+
     if @user.save
       render json: { message: 'User successfully created' }, status: 201
     else
-      render json: { message: 'User not created' }, status: 400
+      render json: { message: @user.errors.full_messages }, status: 400
     end
   end
 end

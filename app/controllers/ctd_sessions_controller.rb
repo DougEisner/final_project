@@ -14,35 +14,33 @@ class CtdSessionsController < Devise::SessionsController
     email = params[:email] if params
     password = params[:password] if params
 
-    id = User.find_by(email: email).try(:id) if email.presence
-
     if email.nil? or password.nil?
       render json: { message: 'The request must contain the user email and password.' }, status: 400
       return
-  end
+    end
 
      # Authentication
     @user = User.find_by(email: email)
 
-  if @user
-    if @user.valid_password? password
-      if @user.confirmed_at.nil?
-        render json: { message: 'Be sure account has been confirmed' }, status: 401
-      else
-        sign_in(resource_name, @user)
-        cookies['_code_alliance_reg'] = { value: JSON.dump({ role: @user.role, email: @user.email }),
-          expires: cookie_expiration(@user) }
+    if @user
+      if @user.valid_password? password
+        if @user.confirmed_at.nil?
+          render json: { message: 'Be sure account has been confirmed' }, status: 401
+        else
+          sign_in(resource_name, @user)
+          cookies['_code_alliance_reg'] = { value: JSON.dump({ role: @user.role, email: @user.email }),
+            expires: cookie_expiration(@user) }
           render json: { message: 'User successfully signed in' }, status: 200
-      end
+        end
       else
         render json: { message: 'Invalid email or password.' }, status: 400
       end
-      else
-        render json: { message: 'Invalid email or password.' }, status: 400
-      end
+    else
+      render json: { message: 'Invalid email or password.' }, status: 400
     end
+  end
 
-   def cookie_expiration(user)
-     user.confirmed_at + 1.year
-   end
+  def cookie_expiration(user)
+    user.confirmed_at + 1.year
+  end
 end
