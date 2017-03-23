@@ -23,18 +23,18 @@
           <a class="btn-flat waves-effect waves-light col s12">Learn More</a>
         </div>
       </li>
-      <% end %>
+
+
+      <% #if is_admin? %>
+        <%= link_to 'Show', product_path(product) %>
+        <%= link_to 'Edit', edit_product_path(product) %>
+        <%= link_to 'Destroy', product_path(product), method: :delete, data: { confirm: 'Are you sure?' } %>
+        <%= link_to 'New Product', new_product_path %>
+      <% #end %>
     </ul>
 
-    <% if is_admin? %>
-    <%= link_to 'Show', product_path %>
-    <%= link_to 'Edit', edit_product_path(product) %>
-    <%= link_to 'Destroy', product_path, method: :delete, data: { confirm: 'Are you sure?' } %>
-    <%= link_to 'New Product', new_product_path %>
-    <% end %>
-
     <p id="notice"><%= notice %></p>
-
+    <% end %>
   </section>
 
 </div>
