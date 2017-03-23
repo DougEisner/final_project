@@ -1,0 +1,60 @@
+#details-page {
+  &.container {
+    width: 80%;
+  }
+
+  .summary {
+    padding: 3em 0;
+
+    .title {
+      padding-right: 10%;
+    }
+
+    h2 {
+      font-size: 1rem;
+      color: $text-blue;
+      font-weight: 700;
+    }
+    h3 {
+      font-size: 2rem;
+    }
+  }
+
+  .description {
+
+  }
+
+
+
+  .pricing-wrapper {
+    padding: 5% 10%;
+  }
+
+  .pricing {
+
+  }
+
+  .card {
+    h4 {
+      font-size: 1.5rem;
+      padding: .4em 0;
+    }
+  }
+
+  .card-content {
+    padding: 0px 25px 10px;
+
+    p {
+      justify-content: center;
+    }
+  }
+
+  .card-action {
+    padding: 16px;
+
+    a {
+      font-size: 14px;
+      padding: 0 20px;
+    }
+  }
+}
