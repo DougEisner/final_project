@@ -8,11 +8,31 @@
     margin-bottom: 2em;
     margin-top: 2em;
     overflow: hidden;
-    padding: 5%;
+    padding: 3%;
 
     h3 {
-      margin: 0 0 10px 0;
+      color: $text-blue;
+      font-family: 'Play', sans-serif;
+      margin: 0 0 30px 0;
       font-size: 2.5rem;
+    }
+
+    .user-role {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+.registration-footer {
+  margin-bottom: 4em;
+  .login-links a {
+    color: $sky;
+    font-family: 'Play', sans-serif;
+
+    &:hover {
+      color: $snow;
     }
   }
 }
