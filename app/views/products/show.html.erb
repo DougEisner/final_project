@@ -67,7 +67,7 @@
               <h3>$10,000</h3>
             </div>
             <div class="center card-action">
-              <%= link_to 'Purchase License', license_template_path, class: "btn waves-effect waves-light white-text rusted-red" %>
+              <%= link_to 'Purchase License', { :controller => 'licenses', :action => 'new', :product_id => @product }, class: "btn waves-effect waves-light white-text rusted-red" %>
             </div>
           </div>
         </div>

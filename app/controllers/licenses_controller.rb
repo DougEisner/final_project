@@ -15,6 +15,7 @@ class LicensesController < ApplicationController
   # GET /licenses/new
   def new
     @license = License.new
+    @product = Product.find(params[:product_id])
   end
 
   # GET /licenses/1/edit
