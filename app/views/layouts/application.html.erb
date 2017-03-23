@@ -39,13 +39,11 @@
           <% if user_signed_in? %>
           <li class="link">
             <%= link_to destroy_user_session_path, method: :delete do %>Log out
-            <i class="material-icons left">perm_identity</i>
             <% end %>
           </li>
 
           <% else %>
           <li class="link"><%= link_to new_user_session_path do %>Log In
-            <i class="material-icons left">perm_identity</i>
             <% end %>
           </li>
           <% end %>

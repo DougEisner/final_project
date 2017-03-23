@@ -1,4 +1,4 @@
-$(document).on('turbolinks:load', function() {
+$(document).ready(function() {
   $('.parallax').parallax();
   $(".dropdown-button").dropdown();
   $(".button-collapse").sideNav();

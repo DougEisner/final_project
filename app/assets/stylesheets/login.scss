@@ -11,17 +11,18 @@
     padding: 0;
 
     h3 {
-      color: #065399;
+      color: #0464ab;
       font-family: 'Play';
       font-size: 2rem;
       font-weight: 700;
-      margin: 0 0 2em 0;
+      margin: 0 0 1em 0;
+      text-transform: uppercase;
     }
   }
 
 
   .login-form {
-    padding: 3em;
+    padding: 2em 3em 1.5em;
     display: flex;
     flex-flow: column wrap;
 
@@ -41,52 +42,74 @@
     -webkit-box-shadow: 0 0 0 1000px white inset !important;
     }
 
-    .actions {
-      align-items: center;
-      display: flex;
-      justify-content: space-between;
+  }
+}
 
-      .btn-flat {
-        margin: 2em 0 1em;
-        border-radius: 5em;
-      }
+.actions {
+  align-items: center;
+  display: flex;
+  flex-flow: row wrap;
 
-      i {
-        background-color: white;
-        border: 1px solid $blue;
-        color: $blue;
-        height: 50px;
-        line-height: 50px;
-      }
+  .btn-flat {
+    border-radius: 5em;
+    padding: 0 8%;
+  }
 
-      i:hover {
-        color: $white;
-        background-color: $blue;
-        border-color: $sky;
-      }
+  i {
+    background-color: white;
+    border: 1px solid $blue;
+    color: $blue;
+    height: 45px;
+    line-height: 45px;
+    margin: 2em 0 2em;
+  }
 
-      a {
-        background-color: #2196F3;
-        color: $white;
-        height: 35px;
-        line-height: 35px;
-      }
+  i:hover {
+    color: $white;
+    background-color: $blue;
+    border-color: $sky;
+  }
 
-      a:hover {
-        background-color: $blue;
-        border-color: $sky;
-      }
+  div {
+    display: flex;
+    align-items: center;
+    border-top: 1px solid $border-shadow;
+    justify-content: space-between;
+    width: 100%;
+
+    p {
+      color: $dark-blue;
+      flex: 2 1 auto;
+      font-size: 14px;
+      font-weight: normal;
+      margin: 2em 0 1em;
+    }
+
+    a {
+      background-color: #26a69a;
+      max-width: 40%;
+      color: $white;
+      height: 35px;
+      line-height: 35px;
+      margin: 2em 0 1em;
+      text-align: center;
+    }
+
+    a:hover {
+      background-color: #4db6ac;
+      border-color: #80cbc4;
     }
   }
-  .login-footer {
-    margin-bottom: 4em;
-    .login-links a {
-      color: $sky;
-      font-family: 'Play', sans-serif;
+}
 
-      &:hover {
-        color: $snow;
-      }
+.sessions-footer {
+  margin-bottom: 4em;
+  .links a {
+    color: $sky;
+    font-family: 'Play', sans-serif;
+
+    &:hover {
+      color: $snow;
     }
   }
 }

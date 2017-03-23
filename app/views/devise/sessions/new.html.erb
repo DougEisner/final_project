@@ -23,16 +23,17 @@
 
       <div class="actions">
         <%= f.submit "Log In", :class => 'btn-flat waves-effect' %>
-
-        <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
-        <%= link_to "Sign up", new_registration_path(resource_name), :class => 'btn-flat waves-effect' %>
-        <% end %>
+        <div>
+          <%- if devise_mapping.registerable? && controller_name != 'registrations' %>
+          <p>Don't have an Account?</p><%= link_to "Register", new_registration_path(resource_name), :class => 'btn-flat waves-effect' %>
+          <% end %>
+        </div>
       </div>
       <% end %>
     </div>
   </div>
 
-  <div class="login-footer center col s10 offset-s1 m8 offset-m2 l4 offset-l4">
+  <div class="sessions-footer center col s10 offset-s1 m8 offset-m2 l4 offset-l4">
     <%= render "devise/shared/links" %>
   </div>
 
