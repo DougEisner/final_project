@@ -20,7 +20,7 @@
             <h6><%= product.institution %></h6>
             <p class="grey-text hide-on-small-onl"><%= product.summary %></p>
           </div>
-          <a class="btn-flat waves-effect waves-light col s12">Learn More</a>
+          <%= link_to 'Product', product, class: "btn-flat waves-effect waves-light col s12" %>
         </div>
       </li>
       <% end %>
