@@ -1,8 +1,14 @@
 #mobile-demo {
   .details {
-    background: url('navy-splash.png') no-repeat center center;
-    background-size: cover;
-    margin-bottom: 15px;
+    background-color: $text-blue;
     padding: 15px 0 0 15px;
+  }
+
+  .row {
+    margin-bottom: 0;
+  }
+
+  li a {
+    font-size: 1.2em;
   }
 }
