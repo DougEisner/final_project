@@ -3,9 +3,14 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 
-.license-input {
+.license-user_input {
     max-width: 30em !important;
     height: 1rem !important;
     padding: 0 1rem !important;
+}
 
+.license-agreement {
+  margin: 5em !important;
+  background-color: #f9fafc;
+  padding: 1.5em;
 }

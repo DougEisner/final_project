@@ -1,11 +1,12 @@
 class ChargesController < ApplicationController
 
   def new
+    @license = License.find(params[:license_id])
   end
 
   def create
     # Amount in cents
-    @amount = 500
+    @amount = 15000
 
     customer = Stripe::Customer.create(
       :email => params[:stripeEmail],

@@ -1,12 +1,12 @@
+<%= form_for(@license) do |f| %>
+<div class='license-agreement'>
 
-<h1>CTD License</h1>
-
+<span text-align='center'> CTD License Agreement </span>
 <p>
-  Form of User Agreement
-
 THIS AGREEMENT CONCERNS YOUR RIGHTS AND OBLIGATIONS READ IT CAREFULLY
+</p>
 <p>
-This End-User Agreement (“EULA”) is a legal agreement between <%= current_user.organization %> (“Licensee”), having its principal office at <%= text_field_tag :address, nil, class: 'license-input', placeholder: 'input company address' %>, and North Carolina State University, a constituent institution of the University of North Carolina and a nonprofit educational and research institution organized under the laws of North Carolina (“NCSU”), having its principal office at Campus Box 8210, Raleigh, North Carolina 27695-8210, for the software identified as <%= @product.title %>, as described in NCSU File No. <%  %> (all together, the “Software”).
+This End-User Agreement (“EULA”) is a legal agreement between <%= current_user.organization %> (“Licensee”), having its principal office at <%= f.text_field(:address, class: 'license-user_input', placeholder: 'type company address') %>, and North Carolina State University, a constituent institution of the University of North Carolina and a nonprofit educational and research institution organized under the laws of North Carolina (“NCSU”), having its principal office at Campus Box 8210, Raleigh, North Carolina 27695-8210, for the software identified as <%= @product.title %>, as described in NCSU File No. <%= @product.ncsu_file_no %> (all together, the “Software”).
 </p>
 <p>
 CodeAlliance is a third party distributor of software, and through its online marketplace, makes this Software available for license to Licensee under this EULA. CodeAlliance may also make the Software accessible and available for distribution.
@@ -16,7 +16,7 @@ BY CLICKING “ACCEPT” ON THE “REVIEW AND ACCEPT AGREEMENT” PAGE DURING TH
 </p>
 <p>
 LICENSE FEE:
-License Fee is $____________.
+License Fee is $ <%= @price %>.
 </p>
 <p>
 1. OWNERSHIP AND LICENSE. The Software was created by NCSU, and NCSU is willing to license the Software to end-users, such as Licensee.  Licensee has no rights to the Software other than as expressly stated in this EULA and as may be available under applicable law.  The Software is protected by copyright laws and international copyright treaties, as well as other intellectual property laws and treaties.
@@ -52,7 +52,6 @@ Rental. Licensee may not rent, lease, or lend the Software.
 Term. This EULA will be valid for one year.
 </p>
 <p>Termination. Without prejudice to any other rights or terms outlined, NCSU may terminate this EULA if Licensee fails to comply with the terms and conditions of this EULA. In such event, Licensee must destroy all copies of the Software and all of its component parts.
-
 </p>
 <p>
 4. COPYRIGHT. All title and copyrights in and to the Software and any copies of all or parts of the Software are owned by NCSU.
@@ -77,14 +76,21 @@ Term. This EULA will be valid for one year.
 10. NOTICE. For the purpose of all written communications and notices between the parties, the address for NCSU is: Office of Technology Commercialization and New Ventures, NORTH CAROLINA STATE UNIVERSITY, Attn: Assistant Vice Chancellor for Technology Commercialization and New Ventures, Campus Box 8210, Raleigh, NC 27695-8210 USA and the address for Licensee is as listed above, or any other addresses of which either party shall notify the other party in writing.
 </p>
 <p>
-11. MISCELLANEOUS.  NCSU is based in and directs its opera<br>tions from locations in the State of North Carolina, United States of America. This EULA is governed by the laws of the State of North Carolina, without reference to conflict of laws provisions. All legal proceedings relating to the Software or the formation or interpretation of this EULA shall be brought only in the state or federal courts located in Raleigh, North Carolina, and Licensee hereby expressly submit to the jurisdiction of such courts and consent to extra-territorial service of process.
+11. MISCELLANEOUS.  NCSU is based in and directs its operations from locations in the State of North Carolina, United States of America. This EULA is governed by the laws of the State of North Carolina, without reference to conflict of laws provisions. All legal proceedings relating to the Software or the formation or interpretation of this EULA shall be brought only in the state or federal courts located in Raleigh, North Carolina, and Licensee hereby expressly submit to the jurisdiction of such courts and consent to extra-territorial service of process.
 </p>
 <p>
 12. ELECTRONIC COPY. The parties to this document agree that a copy of the original signature (including an electronic copy) may be used for any and all purposes for which the original signature may have been used.  The parties further waive any right to challenge the admissibility or authenticity of this document in a court of law based solely on the absence of an original signature.
 </p>
-
-
-
+<p>
+  <%= f.check_box(:accept, { class: "input-field" }, true, false)%>
+  <label for='license_accept'>'I agree to the terms and conditions of this license agreement.'</label>
+  </p>
+  <%= f.hidden_field(:product_id)%>
+  <%= f.hidden_field(:price)%>
+  <%= f.hidden_field(:user_id, :value => current_user.id)%>
+  <%= f.submit 'Submit license', class: "btn waves-effect waves-light white-text rusted-red" %>
+</div>
+<% end %>
 <%# TODO: NEED HTML form tag to allow users to "Agree to license terms.""
  %>
 
