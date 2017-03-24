@@ -1,7 +1,7 @@
 <%= form_for(@license) do |f| %>
 <div class='license-agreement'>
 
-<span text-align='center'> CTD License Agreement </span>
+<span text-align='center'> <%= @product.title %> License Agreement </span>
 <p>
 THIS AGREEMENT CONCERNS YOUR RIGHTS AND OBLIGATIONS READ IT CAREFULLY
 </p>
@@ -16,7 +16,7 @@ BY CLICKING “ACCEPT” ON THE “REVIEW AND ACCEPT AGREEMENT” PAGE DURING TH
 </p>
 <p>
 LICENSE FEE:
-License Fee is $ <%= @price %>.
+License Fee is $ <%= @license.price %>.
 </p>
 <p>
 1. OWNERSHIP AND LICENSE. The Software was created by NCSU, and NCSU is willing to license the Software to end-users, such as Licensee.  Licensee has no rights to the Software other than as expressly stated in this EULA and as may be available under applicable law.  The Software is protected by copyright laws and international copyright treaties, as well as other intellectual property laws and treaties.
