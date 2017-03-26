@@ -83,12 +83,12 @@ Term. This EULA will be valid for one year.
 </p>
 <p>
   <%= f.check_box(:accept, { class: "input-field" }, true, false)%>
-  <label for='license_accept'>'I agree to the terms and conditions of this license agreement.'</label>
+  <label for='license_accept'>'I have reviewed the agreement.'</label>
   </p>
   <%= f.hidden_field(:product_id)%>
   <%= f.hidden_field(:price)%>
   <%= f.hidden_field(:user_id, :value => current_user.id)%>
-  <%= f.submit 'Submit license', class: "btn waves-effect waves-light white-text rusted-red" %>
+  <%= f.submit 'ACCEPT AGREEMENT', class: "btn waves-effect waves-light white-text rusted-red" %>
 </div>
 <% end %>
 <%# TODO: NEED HTML form tag to allow users to "Agree to license terms.""
