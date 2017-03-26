@@ -16,7 +16,7 @@
 
         <!-- Mobile Side Nav -->
         <a href="#" data-activates="mobile-demo" class="button-collapse">
-          <i class="material-icons link">menu</i>
+          <i class="material-icons link tooltipped" data-position="right" data-delay="1000" data-tooltip="Click for Menu">menu</i>
         </a>
         <ul class="side-nav white-text" id="mobile-demo">
           <li class="details">
@@ -26,8 +26,9 @@
           </li>
           <li><%= link_to 'Register', new_user_registration_path %></li>
           <li><%= link_to 'Log In', new_user_session_path %></li>
-          <li><%= link_to 'Pricing', pricing_path %></li>
           <li><%= link_to 'Products', products_path %></li>
+          <li><%= link_to 'Software', products_path %></li>
+
         </ul>
 
         <!-- Desktop Nav -->
