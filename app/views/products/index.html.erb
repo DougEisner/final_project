@@ -25,12 +25,12 @@
       </li>
 
 
-      <% #if is_admin? %>
+      <% if is_admin? %>
         <%= link_to 'Show', product_path(product) %>
         <%= link_to 'Edit', edit_product_path(product) %>
         <%= link_to 'Destroy', product_path(product), method: :delete, data: { confirm: 'Are you sure?' } %>
         <%= link_to 'New Product', new_product_path %>
-      <% #end %>
+      <% end %>
     </ul>
 
     <p id="notice"><%= notice %></p>

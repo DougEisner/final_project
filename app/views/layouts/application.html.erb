@@ -33,6 +33,12 @@
 
         <!-- Desktop Nav -->
         <ul class="right hide-on-med-and-down">
+          <% if user_signed_in? %>
+          <li class="link">
+            <%= link_to current_user.name, licenses_path %>
+          </li>
+          <% end %>
+
           <li class="link"><%= link_to 'Search', products_path %></li>
           <li class="link"><%= link_to 'Data', products_path %></li>
           <li class="link"><%= link_to 'Software', products_path %></li>
@@ -47,10 +53,10 @@
           <li class="link"><%= link_to new_user_session_path do %>Log In
             <% end %>
           </li>
+          <li class="link"><%= link_to 'Register', new_user_registration_path, class: 'btn-flat' %></li>
           <% end %>
 
 
-          <li class="link"><%= link_to 'Register', new_user_registration_path, class: 'btn-flat' %></li>
         </ul>
 
       </div>
