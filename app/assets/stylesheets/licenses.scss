@@ -1,16 +1,30 @@
-// Place all the styles related to the Licenses controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+#license {
+  background: $snow;
+  padding: 0 0 3em 0;
 
+  h1 {
+    color: $grey;
+    font-size: 35px;
+    margin: 0;
+    padding: 2em 0 1em;
+  }
 
-.license-user_input {
-    max-width: 30em !important;
+  p {
+    font-size: 13px;
+    font-weight: normal;
+  }
+
+  .license-agreement {
+    background-color: $white;
+    border: 1px solid $border-shadow;
+    max-height: 80vh;
+    overflow: scroll;
+    padding: 2em;
+  }
+
+  .license-user_input {
     height: 1rem !important;
+    max-width: 30em !important;
     padding: 0 1rem !important;
-}
-
-.license-agreement {
-  margin: 5em !important;
-  background-color: #f9fafc;
-  padding: 1.5em;
+  }
 }
