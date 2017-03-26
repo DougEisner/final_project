@@ -14,8 +14,8 @@ class LicensesController < ApplicationController
 
   # GET /licenses/new
   def new
-    @license = License.new
     @product = Product.find(params[:product_id])
+    @license = @product.licenses.build(price: params[:price])
   end
 
   # GET /licenses/1/edit
@@ -29,7 +29,8 @@ class LicensesController < ApplicationController
 
     respond_to do |format|
       if @license.save
-        format.html { redirect_to @license, notice: 'License was successfully created.' }
+        format.html { redirect_to :controller => 'charges', :action => 'new', :license_id => @license.id}
+
         format.json { render :show, status: :created, location: @license }
       else
         format.html { render :new }
@@ -70,6 +71,6 @@ class LicensesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def license_params
-      params.require(:license).permit(:user_id, :product_id, :price, :expiration_date)
+      params.require(:license).permit(:user_id, :product_id, :price, :expiration_date, :address, :accept)
     end
 end
