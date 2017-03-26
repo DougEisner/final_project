@@ -3,17 +3,20 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 .products-wrapper {
-  background: linear-gradient(to left, $blue 0%, $text-blue 55%, #0a2e76 100%);
-  padding: 5% 0;
-
   h5 {
+    margin: 0;
     color: $snow;
     font-family: 'Play', sans-serif;
   }
+
+  .search-wrapper {
+    background: linear-gradient(to left, $blue 0%, $text-blue 55%, #0a2e76 100%);
+    padding: 3% 15% 6%;
+  }
+
   form {
     border-radius: 5em;
     overflow: hidden;
-    margin-bottom: 7em;
 
     .input-field {
       margin: 0;
@@ -31,6 +34,8 @@
 }
 
 #products {
+  background-color: $snow;
+  padding: 5% 10% 10%;
 
   h2 {
     color: $black;
@@ -40,84 +45,94 @@
   }
 
   li {
-    border-radius: 10px;
+    box-shadow: 0px 5px 32px -7px #a6b5c1;
+    border: 1px solid $border-shadow;
     list-style: none;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
     width: 100%;
   }
 
-  .card {
-    border-radius: 10px;
+  .product {
+    background-color: $white;
     display: flex;
     align-items: center;
     line-height: 1.5em;
     margin: 0;
-    padding: 40px;
+    padding: 20px;
+
+    .details {
+      flex: 1 1 50%;
+      padding-right: 3%;
+      color: $black;
+
+      h3 {
+        font-size: 1.2rem;
+        margin: 0;
+      }
+
+      p {
+        font-size: 13px;
+        font-weight: 300;
+        letter-spacing: .7px;
+        line-height: 1.5em;
+      }
+    }
+
+    .developer {
+      border-left: 1px solid $border-shadow;
+      border-right: 1px solid $border-shadow;
+      flex: 1 1 20%;
+      height: 100%;
+      padding: 5% 2%;
+      text-align: center;
+
+      h5 {
+        color: #0277bd;
+        font-size: 0.8rem;
+        font-weight: 700;
+        text-transform: uppercase;
+      }
+      h6 {
+        color: $grey;
+        font-size: .8rem;
+      }
+    }
 
     a {
       border-radius: 6px;
       border: 1px solid #aad4ee;
       color: $blue;
-      height: 50px;
-      line-height: 50px;
+      flex: 1 1 25%;
+      font-family: 'Play', sans-serif;
+      font-size: 15px;
+      height: 40px;
+      line-height: 40px;
       margin-left: 30px;
+      max-width: 100px;
+      padding: 0;
       text-align: center;
       text-transform: uppercase;
-      max-width: 250px;
     }
 
     a:hover {
       background-color: $blue;
       color: white;
     }
-
-    .card-content {
-      display: flex;
-      flex: 2 1 85%;
-      flex-flow: column wrap;
-      justify-content: space-between;
-      padding: 0 1em 0 0;
-
-      h3 {
-        font-size: 1.7rem;
-        margin: 0;
-      }
-
-      h4 {
-        font-size: 1.3rem;
-        margin: 1rem 0 0.5rem 0;
-      }
-
-      h6 {
-        margin: 0.5rem 0 1rem 0;
-      }
-
-      p {
-        font-weight: 300;
-        letter-spacing: .7px;
-        line-height: 1.5em;
-      }
-
-    }
-    a {
-      flex: 1 1 15%;
-      padding: 0;
-    }
   }
 }
 
 @media #{$small-and-down} {
   #products {
-    .card {
+    .product {
       flex-flow: column wrap;
+
+      .details {
+        text-align: center;
+      }
 
       a {
         margin: 0;
         width: 100%;
-      }
-
-      .card-content {
-        padding: 0 0 1.5em 0
       }
     }
   }

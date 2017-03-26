@@ -1,28 +1,18 @@
-<!-- checkout page -->
-<% #form_tag charges_path do %>
-<%= form_for(@license) do %>
-  <article>
-    <% if flash[:error].present? %>
-      <div id="error_explanation">
-        <p><%= flash[:error] %></p>
-      </div>
-    <% end %>
-    <p>Licensed product: <%= Product.find(@license.product_id).title %></p>
+<section id="payment">
 
+  <div class="container">
+    <p>Licensed product: <%= Product.find(@license.product_id).title %></p>
     <p>Company name: <%= current_user.organization %></p>
     <p>Address: <%= @license.address %></p>
     <label class="amount">
       <p>Price: <%= @license.price %></p>
     </label>
+  </div>
+</section>
 
-  </article>
-
-  <p><script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-          data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-          data-description="License Fee"
-          data-amount=@license.price
-          data-locale="auto"></script>
-  </p>
-<% end %>
-
-<%= link_to 'Back', licenses_path %>
+<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+  data-description="License Fee"
+  data-amount=@license.price
+  data-locale="auto">
+</script>
