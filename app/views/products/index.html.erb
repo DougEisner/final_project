@@ -1,40 +1,42 @@
-<div class="products-wrapper row">
+<div class="products-wrapper">
 
-  <h5 class="center">Search for Product</h5>
-  <form class="white col s18 offset-s2 m8 offset-m2 l6 offset-l3">
-    <div class="input-field valign-wrapper">
-      <input id="search" type="search" placeholder="Search for a database here" required>
-      <label class="label-icon" for="search"><i class="material-icons">search</i></label>
-      <i class="material-icons">close</i>
-    </div>
-  </form>
+  <section class="search-wrapper">
+    <h5 class="center">Search for Product</h5>
+    <form class="white">
+      <div class="input-field valign-wrapper">
+        <input id="search" type="search" placeholder="Search for a database here" required>
+        <label class="label-icon" for="search"><i class="material-icons">search</i></label>
+        <i class="material-icons">close</i>
+      </div>
+    </form>
+  </section>
 
-  <section id="products" class="col s10 offset-s1">
+  <section id="products">
     <ul>
       <% @products.each do |product| %>
-      <li class="col s12 m7">
-        <div class="card">
-          <div class="card-content">
-            <h3 class="grey-text text-darken-4"><%= product.title %></h3>
-            <h4><%= product.developer %></h4>
-            <h6><%= product.institution %></h6>
-            <p class="grey-text hide-on-small-onl"><%= product.summary %></p>
+      <li>
+        <div class="product">
+          <div class="details">
+            <h3><%= product.title %></h3>
+            <p><%= product.summary %></p>
+          </div>
+          <div class="developer hide-on-med-and-down">
+            <h5><%= product.institution %></h5>
+            <h6><%= product.developer %></h6>
           </div>
           <%= link_to 'Product', product, class: "btn-flat waves-effect waves-light col s12" %>
         </div>
       </li>
-
-
-      <% if is_admin? %>
-        <%= link_to 'Show', product_path(product) %>
-        <%= link_to 'Edit', edit_product_path(product) %>
-        <%= link_to 'Destroy', product_path(product), method: :delete, data: { confirm: 'Are you sure?' } %>
-        <%= link_to 'New Product', new_product_path %>
       <% end %>
     </ul>
 
-    <p id="notice"><%= notice %></p>
-    <% end %>
+      <% if is_admin? %>
+      <%= link_to 'Show', product_path(product) %>
+      <%= link_to 'Edit', edit_product_path(product) %>
+      <%= link_to 'Destroy', product_path(product), method: :delete, data: { confirm: 'Are you sure?' } %>
+      <%= link_to 'New Product', new_product_path %>
+      <% end %>
+
   </section>
 
 </div>
