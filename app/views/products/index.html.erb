@@ -27,7 +27,7 @@
           <%= link_to 'Product', product, class: "btn-flat waves-effect waves-light col s12" %>
         </div>
       </li>
-      <% end %>
+
     </ul>
 
       <% if is_admin? %>
@@ -36,7 +36,7 @@
       <%= link_to 'Destroy', product_path(product), method: :delete, data: { confirm: 'Are you sure?' } %>
       <%= link_to 'New Product', new_product_path %>
       <% end %>
-
+    <% end %>
   </section>
 
 </div>
