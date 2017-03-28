@@ -1,19 +1,41 @@
 <section id="payment">
 
-  <div class="container">
-    <p>Licensed product: <%= Product.find(@license.product_id).title %></p>
-    <p>License term: one year</p>
-    <p>Company name: <%= current_user.organization %></p>
-    <p>Address: <%= @license.address %></p>
-    <label class="amount">
-      <p>Price: <%= @license.price %></p>
-    </label>
+  <div class="invoice z-depth-3">
+    <div class="invoice-head">
+      <div class="order-user">
+        <h4><%= current_user.organization %></h4>
+        <span><h6>Address: </h6><p><%= @license.address %></p><span>
+      </div>
+      <div class="order-details">
+        <h5>Order</h5>
+      </div>
+    </div>
+    <div class="invoice-body">
+      <div class="item">
+        <h6><%= Product.find(@license.product_id).title %></h6>
+        <p>License term: one year</p>
+      </div>
+      <div class="amount">
+        <p><%= number_to_currency(@license.price) %></p>
+      </div>
+    </div>
+    <div class="invoice-total">
+      <div class="tax">
+        <h6>Tax:</h6>
+        <p>$0.00</p>
+      </div>
+      <div class="total">
+        <h6>Total Due:</h6>
+        <span><%= number_to_currency(@license.price) %></span>
+      </div>
+    </div>
+
+    <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+    data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+    data-description="License Fee"
+    data-amount=@license.price
+    data-locale="auto">
+    </script>
+
   </div>
 </section>
-
-<script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
-  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
-  data-description="License Fee"
-  data-amount=@license.price
-  data-locale="auto">
-</script>

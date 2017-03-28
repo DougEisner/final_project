@@ -4,7 +4,7 @@
 
 .products-wrapper {
   h5 {
-    margin: 0;
+    margin: 0 0 15px 0;
     color: $snow;
     font-family: 'Play', sans-serif;
   }
@@ -23,7 +23,12 @@
 
       input {
         border: none;
+        height: 2.5rem;
         margin: 0;
+      }
+
+      label {
+        top: .5rem;
       }
 
       .material-icons {
