@@ -11,4 +11,9 @@ $(document).on('DOMContentLoaded', function() {
       $submitLicense.addClass('disabled');
     }
   });
+
+
+  const paymentBtn = $('.stripe-button-el');
+  paymentBtn[0].firstChild.innerText = "Pay Now"
+  paymentBtn.addClass('waves-effect')
 });

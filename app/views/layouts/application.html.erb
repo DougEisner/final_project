@@ -33,15 +33,9 @@
 
         <!-- Desktop Nav -->
         <ul class="right hide-on-med-and-down">
-          <% if user_signed_in? %>
-          <li class="link">
-            <%= link_to current_user.name, licenses_path %>
-          </li>
-          <% end %>
-
-          <li class="link"><%= link_to 'Search', products_path %></li>
-          <li class="link"><%= link_to 'Data', products_path %></li>
           <li class="link"><%= link_to 'Software', products_path %></li>
+          <li class="link"><%= link_to 'Data', products_path %></li>
+          <li class="link"><%= link_to 'Search', products_path %></li>
 
           <% if user_signed_in? %>
           <li class="link">
