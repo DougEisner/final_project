@@ -43,7 +43,7 @@ detailed_description: "The CBRA software evaluates the bioactivity of chemicals 
 
 CBRA’s graphical output includes radial plots visualizing chemicals with the highest structural similarity and bio-profile similarity to the query molecule. In addition, CBRA outputs a quantitative prediction of a new chemical’s activity (e.g., in vivo toxicity) based on those of the similar chemicals.
 
-In addition, CBRA outputs a quantitative prediction of a new chemical's activity (e.g., in vivo toxicity, anti-cancer potency) based on those of the similar chemicals."."
+In addition, CBRA outputs a quantitative prediction of a new chemical's activity (e.g., in vivo toxicity, anti-cancer potency) based on those of the similar chemicals."
 # image_file_name: 'CBRA.png',
 # image_content_type: 'image/png',
 # image_file_size: 77632,
@@ -58,7 +58,7 @@ institution: "North Carolina State University",
 category: "Information Technology",
 price: 100.99,
 summary: "Eye tracking software monitors a user’s gaze and determines the focal point on the screen.  Software then narrates a text, dynamically adjusting pace based on eye tracking data and position.  Specific keywords, word types and phrases trigger adjustments as well",
-detailed_description: "Stuff stuff stuff details details description"."
+detailed_description: "Stuff stuff stuff details details description"
 # image_file_name: 'GazeGIS.png',
 # image_content_type: 'image/png',
 # image_file_size: 201048,
@@ -68,8 +68,7 @@ detailed_description: "Stuff stuff stuff details details description"."
 Product.find_or_create_by(
 title: "SAFARIS (Ag Pest Risk Analyzer)",
 developer: "Dr. Karl A. Suiter,  College of Agriculture and Life Sciences, NCSU
-Ann Smittu Joseph, College of Agriculture and Life Sciences, NCSU
-",
+Ann Smittu Joseph, College of Agriculture and Life Sciences, NCSU",
 email: "email@mail.com",
 institution: "North Carolina State University",
 category: "Agriculture",
@@ -100,7 +99,7 @@ This system automatically tunes the prosthetic impedance control parameters in s
 
 This auto-tuning system can replace the expert and fine tune the control parameters of the above knee prostheses automatically.
 
-Auto-tuning capability cuts the cost of prosthesis fittings and helps ensures that  amputees maintain good gait patterns, as body weight, body shape and walking styles adjust over time.".
+Auto-tuning capability cuts the cost of prosthesis fittings and helps ensures that  amputees maintain good gait patterns, as body weight, body shape and walking styles adjust over time."
 # image_file_name: 'prosthetic.png',
 # image_content_type: 'image/png',
 # image_file_size: 78052,
@@ -143,7 +142,7 @@ Advantages
 
 Can track target movement in a scene with as few as two images (model and target images).
 Can track the target without any limit on the amount of perturbations to its original configuration.
-Written in C++ and interfaced with MATLAB (mex file is available) and Python.".
+Written in C++ and interfaced with MATLAB (mex file is available) and Python."
 # image_file_name: '3D_point_matching.png',
 # image_content_type: 'image/png',
 # image_file_size: 87464,
@@ -151,14 +150,14 @@ Written in C++ and interfaced with MATLAB (mex file is available) and Python.".
 )
 
 Product.find_or_create_by(
-title: "TanGeoMS: Interaction with geospatial simulations by manipulating linked physical models"
-developer: "CDr. Helena Mitasova
+title: "TanGeoMS: Interaction with geospatial simulations by manipulating linked physical models",
+developer: "Dr. Helena Mitasova,
 Dr. Helena Mitasova is Center of Geospatial Analytics Faculty Fellow, a Professor in the Department of Marine, Earth and Atmospheric Sciences, and a member of the Geospatial Science and Technology Faculty at NC State University",
 email: "Helena.Mitasova@ncsu.edu",
 institution: "North Carolina State University",
 category: "Geospatial Analytics",
 price: 100.99,
-summary: "The Tangible Geospatial Modeling System (TanGeoMS) enables users to interact with digital models by manipulating linked physical models."
+summary: "The Tangible Geospatial Modeling System (TanGeoMS) enables users to interact with digital models by manipulating linked physical models.",
 detailed_description: "TanGeoMS links a physical landscape model with a virtual landscape in a GIS through an automated feedback cycle of real-time 3D scanning, geospatial modeling, and projection, enabling haptic human computer interaction and an intuitive grasp of 3-dimensional change.
 
 As users modify the physical model - sculpting the terrain by hand for example - the changes are scanned into the GIS, geospatial simulations are run, and the results are projected back onto the physical model in real-time.
@@ -166,7 +165,7 @@ As users modify the physical model - sculpting the terrain by hand for example -
 Rapid prototyping is used to generate a precise physical model to which a layer of polymer-enriched sand is then added to create a malleable surface.  A Kinect for Windows scanner is used to digitize changes to the model in real-time.
 Geospatial analyses include terrain modeling, hydrological modeling, fire modeling, erosion-deposition, landform identification, subsurface soil modeling, risk and suitability analysis, etc.
 
-With TanGeoMS scientists, planners, and designers can easily and rapidly test ideas in geographic space while being guided by scientific feedback.  Applications include computer aided modeling, hazard and disaster management (such as fire management), ecosystem restoration, forestry, geological and geomorphological research, urban planning and design, construction and engineering, landscape architecture, remediation, natural resource exploration, military logistics and deployment, and education."."
+With TanGeoMS scientists, planners, and designers can easily and rapidly test ideas in geographic space while being guided by scientific feedback.  Applications include computer aided modeling, hazard and disaster management (such as fire management), ecosystem restoration, forestry, geological and geomorphological research, urban planning and design, construction and engineering, landscape architecture, remediation, natural resource exploration, military logistics and deployment, and education."
 # image_file_name: 'TanGeoMS.png',
 # image_content_type: 'image/png',
 # image_file_size: 217160,
@@ -196,7 +195,7 @@ Under the DBAT offsets, delay for the through movements on the corridor decrease
 
 Product.find_or_create_by(
 title: "System and Method of Error Control for Interactive Low-Bit Rate Video Transmission Over the Internet",
-developer: "Dr. Injong Rhee
+developer: "Dr. Injong Rhee,
 Dr. Injong Rhee is Professor of Computer Science at North Carolina State University.",
 email: "email@mail.com",
 institution: "North Carolina State University",
@@ -214,21 +213,4 @@ A signal processing algorithm that is envisioned being implemented as part of a 
 Could also be implemented in software
 Patent Information
 
-An US patent No. 6,105,407 has been issued, titled “System and Method of Error Control for Interactive Low-Bit Rate Video Transmission”.",)
-
-
-# Product.create(
-# title: "Title ##{n}",
-# developer: "",
-# email: "email@mail.com",
-# institution: "North Carolina State University",
-# category: "Genomics",
-# price: 100.99,
-# summary: "Ipsum Lorem Ipsum Lorem",
-# detailed_description: "",
-# image: 'images/product_images/CTD.png',
-# image_file_name: '',
-# image_content_type: '',
-# image_file_size: ,
-# image_updated_at: Time.now
-# )
+An US patent No. 6,105,407 has been issued, titled “System and Method of Error Control for Interactive Low-Bit Rate Video Transmission.")
