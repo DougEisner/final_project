@@ -1,10 +1,10 @@
 <div class="products-wrapper">
 
   <section class="search-wrapper">
-    <h5 class="center">Search for Product</h5>
+    <h5 class="center">Search Products</h5>
     <form class="white">
       <div class="input-field valign-wrapper">
-        <input id="search" type="search" placeholder="Enter product name" required>
+        <input id="search" type="search" placeholder="Enter search term" required>
         <label class="label-icon" for="search"><i class="material-icons">search</i></label>
         <i class="material-icons">close</i>
       </div>
@@ -31,7 +31,7 @@
             <h5><%= product.institution %></h5>
             <h6><%= product.developer %></h6>
           </div>
-          <%= link_to 'Product', product, class: "btn-flat waves-effect waves-light col s12" %>
+          <%= link_to 'Details', product, class: "btn-flat waves-effect waves-light col s12" %>
         </div>
       </li>
 

@@ -11,8 +11,8 @@ Product.destroy_all
 
 Product.create(
   title: "Comparative Toxicogenomics databases",
-  developer: "Carolyn Mattingly, PhD",
-  email: "email@mail.com",
+  developer: "Carolyn J. Mattingly, PhD, Dept. of Biological Sciences",
+  email: "carolyn.mattingly@ncsu.edu",
   institution: "North Carolina State University",
   category: "Genomics",
   price: 100.99,
@@ -33,8 +33,8 @@ Generally: Understanding the mechanisms by which environmental chemicals or drug
 
 Product.create(
 title: "CBRA",
-developer: "Dr. Denis Fourches, Assistant Professor",
-email: "email@mail.com",
+developer: "Denis Fourches, PhD, Dept. of Chemistry",
+email: "denis.fourches@ncsu.edu",
 institution: "North Carolina State University",
 category: "Chemistry",
 price: 100.99,
@@ -52,8 +52,8 @@ In addition, CBRA outputs a quantitative prediction of a new chemical's activity
 
 Product.find_or_create_by(
 title: "GazeGis (Dynamic Gaze Tracker)",
-developer: "Laura Gray Tateosian, PhD",
-email: "email@mail.com",
+developer: "Laura Gray Tateosian, PhD, Ctr. for Spatial Analytics",
+email: "laura.tateosian@ncsu.edu",
 institution: "North Carolina State University",
 category: "Information Technology",
 price: 100.99,
@@ -67,9 +67,8 @@ detailed_description: "Stuff stuff stuff details details description"
 
 Product.find_or_create_by(
 title: "SAFARIS (Ag Pest Risk Analyzer)",
-developer: "Dr. Karl A. Suiter,  College of Agriculture and Life Sciences, NCSU
-Ann Smittu Joseph, College of Agriculture and Life Sciences, NCSU",
-email: "email@mail.com",
+developer: "Karl A. Suiter, PhD, College of Agriculture and Life Sciences",
+email: "karl.suiter@ncsu.ed",
 institution: "North Carolina State University",
 category: "Agriculture",
 price: 100.99,
@@ -86,8 +85,8 @@ detailed_description: "It will be used as a research tool for federal and state 
 
 Product.find_or_create_by(
 title: "Prosthetic Leg Tuner",
-developer: "He Huang, PhD, Associate Professor of Biomedical Engineering, Director of the Rehabilitation Engineering Center, College of Engineering, Department of Biomedical Engineering, NCSU",
-email: "email@mail.com",
+developer: "He Huang, PhD, Dept. of Biomedical Engineering",
+email: "He.Huang@ncsu.edu",
 institution: "North Carolina State University",
 category: "Medical Device",
 price: 100.99,
@@ -108,8 +107,8 @@ Auto-tuning capability cuts the cost of prosthesis fittings and helps ensures th
 
 Product.find_or_create_by(
 title: "TOPOS Speech and Gesture Analyzer",
-developer: "Carolyn Mattingly, PhD",
-email: "email@mail.com",
+developer: "David M. Rieder, PhD, College of Humanities and Social Sciences",
+email: "David.Reider@ncsu.edu",
 institution: "North Carolina State University",
 category: "Information Technology",
 price: 100.99,
@@ -126,8 +125,8 @@ Topos can also be easily extended by developers to many analytical scenarios, bo
 
 Product.find_or_create_by(
 title: "Three-dimensional Point Pattern Matching System",
-developer: "Dr. Arash Dehghan Banadaki is a post-doctoral researcher in NC State’s Department of Material Science and Engineering. His research is generally focused on algorithm development for modeling of material systems.",
-email: "email@mail.com",
+developer: "Arash Dehghan Banadaki, PhD, Dept. of Material Science and Engineering",
+email: "arash.banadaki@ncsu.edu",
 institution: "North Carolina State University",
 category: "Information Technology",
 price: 100.99,
@@ -151,9 +150,8 @@ Written in C++ and interfaced with MATLAB (mex file is available) and Python."
 
 Product.find_or_create_by(
 title: "TanGeoMS: Interaction with geospatial simulations by manipulating linked physical models",
-developer: "Dr. Helena Mitasova,
-Dr. Helena Mitasova is Center of Geospatial Analytics Faculty Fellow, a Professor in the Department of Marine, Earth and Atmospheric Sciences, and a member of the Geospatial Science and Technology Faculty at NC State University",
-email: "Helena.Mitasova@ncsu.edu",
+developer: "Helena Mitasova, PhD, Center for Geospatial Analytics",
+email: "helena.mitasova@ncsu.edu",
 institution: "North Carolina State University",
 category: "Geospatial Analytics",
 price: 100.99,
@@ -175,7 +173,7 @@ With TanGeoMS scientists, planners, and designers can easily and rapidly test id
 Product.find_or_create_by(
 title: "DBAT: Traffic Optimization System",
 developer: "Sangkey Kim, PhD, College of Engineering, Civil, Construction, and Environmental Engineering",
-email: "email@mail.com",
+email: "sangkey.kim@ncsu.edu",
 institution: "North Carolina State University",
 category: "Information Techology",
 price: 100.99,
@@ -195,9 +193,8 @@ Under the DBAT offsets, delay for the through movements on the corridor decrease
 
 Product.find_or_create_by(
 title: "System and Method of Error Control for Interactive Low-Bit Rate Video Transmission Over the Internet",
-developer: "Dr. Injong Rhee,
-Dr. Injong Rhee is Professor of Computer Science at North Carolina State University.",
-email: "email@mail.com",
+developer: "Injong Rhee, PhD, Dept. of Computer Science",
+email: "injong.rhee@ncsu.edu",
 institution: "North Carolina State University",
 category: "Computer Science",
 price: 100.99,
