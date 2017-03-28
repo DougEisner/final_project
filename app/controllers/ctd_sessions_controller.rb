@@ -30,8 +30,10 @@ class CtdSessionsController < Devise::SessionsController
           render json: { message: 'Be sure account has been confirmed' }, status: 401
         else
           sign_in(resource_name, @user)
-          cookies['_code_alliance_reg'] = { value: { id: @user.id, role: @user.role, email: @user.email,
-           expires: cookie_expiration(@user) }}
+          # cookies['_code_alliance_reg'] = { value: { id: @user.id, role: @user.role, email: @user.email,
+          #  expires: cookie_expiration(@user) }}
+          response.headers['_code_alliance_reg'] = { id: @user.id, role: @user.role, email: @user.email,
+           expires: cookie_expiration(@user) }.to_json
           render json: { message: 'User successfully signed in' }, status: 200
         end
       else

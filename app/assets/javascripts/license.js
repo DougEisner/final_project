@@ -12,8 +12,4 @@ $(document).on('DOMContentLoaded', function() {
     }
   });
 
-
-  const paymentBtn = $('.stripe-button-el');
-  paymentBtn[0].firstChild.innerText = "Pay Now"
-  paymentBtn.addClass('waves-effect')
 });
