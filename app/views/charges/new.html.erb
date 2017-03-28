@@ -2,6 +2,7 @@
 
   <div class="container">
     <p>Licensed product: <%= Product.find(@license.product_id).title %></p>
+    <p>License term: one year</p>
     <p>Company name: <%= current_user.organization %></p>
     <p>Address: <%= @license.address %></p>
     <label class="amount">

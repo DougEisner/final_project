@@ -12,6 +12,13 @@
   </section>
 
   <section id="products">
+    <div class='search-header'>
+      <% if params[:search].nil? %>
+        <%='Featured Technologies' %>
+      <% else %>
+        <%='Search Results' %>
+      <% end %>
+    </div>
     <ul>
       <% @products.each do |product| %>
       <li>

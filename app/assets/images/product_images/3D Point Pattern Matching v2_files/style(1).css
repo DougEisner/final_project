@@ -1,0 +1,12 @@
+.hide-this-part {
+	display:none;
+}
+
+.hide-this-part-more {
+	text-decoration: underline;
+}
+
+.showmore-indicator:before, .showless-indicator:before {
+	font-size: 0.75em;
+	padding-left: 0.5em;
+}

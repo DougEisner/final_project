@@ -1,0 +1,20 @@
+a.ncsu-major-link {
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+a.ncsu-major-link .glyphicon-thin-arrow:before {
+  font-size: 1.5em;
+  line-height: 1.5rem;
+  vertical-align: text-bottom;
+  display: inline-block;
+  padding-left: 0;
+  -webkit-transition: padding-left 0.2s ease;
+  -moz-tranisiton: padding-left 0.2s ease;
+  transition: padding-left 0.2s ease;
+}
+
+a.ncsu-major-link:hover .glyphicon-thin-arrow:before {
+  padding-left: 0.15em;
+  margin-right: -0.15em;
+}

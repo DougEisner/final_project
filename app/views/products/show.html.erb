@@ -11,9 +11,7 @@
           <p><strong>Developer:</strong> <%= @product.developer %></p>
         </div>
         <div class="details col m4 s12">
-          <p><strong>Category:</strong> <%= @product.category %></p>
-          <p><strong>Institution:</strong> <%= @product.institution %></p>
-          <p><strong>Email:</strong> <%= @product.email %></p>
+          <img src="<%= @product.image.url(:medium) %>" alt="<%= @product.title %>" />
         </div>
       </div>
     </div>
@@ -24,7 +22,9 @@
         <p><%= @product.detailed_description %></p>
       </div>
       <div class="images col s12 m4">
-        <img src="<%= @product.image.url(:medium) %>" alt="<%= @product.title %>" />
+        <p><strong>Category:</strong> <%= @product.category %></p>
+        <p><strong>Institution:</strong> <%= @product.institution %></p>
+        <p><strong>Email:</strong> <%= @product.email %></p>
       </div>
     </div>
   </div>
