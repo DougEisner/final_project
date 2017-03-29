@@ -1,6 +1,14 @@
 #details-page {
   padding-top: 30px;
 
+  p {
+    line-height: 1.3em;
+  }
+
+  .container {
+    width: 60%;
+  }
+
   .summary-wrapper {
     .title {
       padding: 0;
@@ -19,7 +27,6 @@
 
     .summary {
       padding: 0 10% 0 0.75rem;
-      margin-bottom: 3em;
     }
   }
 
@@ -44,21 +51,24 @@
   .pricing-wrapper {
     background-color: $snow;
     border-top: 1px solid $border-shadow;
+    padding: 2em 0;
+
+    h2 {
+      color: $text-blue;
+      font-size: 3em;
+      margin-bottom: 1em;
+      text-align: center;
+    }
 
     .pricing {
-      padding: 5% 0%;
+      display: flex;
+      justify-content: center;
       width: 80%;
-
-      h2 {
-        color: $text-blue;
-        font-size: 3em;
-        margin-bottom: 1em;
-        text-align: center;
-      }
 
       .row {
         display: flex;
         justify-content: space-between;
+        width: 100%;
 
         > div {
           flex: 1 1 30%;
@@ -67,10 +77,7 @@
       }
 
       .tier-4 {
-        width: 300px;
-        position: fixed;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        min-width: 300px;
       }
     }
     .price-card {
