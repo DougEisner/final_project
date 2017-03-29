@@ -1,12 +1,23 @@
 #details-page {
+  background-color: $snow;
   padding-top: 30px;
 
   p {
     line-height: 1.3em;
   }
 
+  h5 {
+    font-family: 'Play', sans-serif;
+    color: $text-blue;
+    font-weight: 700;
+  }
+
   .container {
-    width: 60%;
+    width: 65%;
+    background: white;
+    padding: 2em 3em;
+    box-shadow: 1px 1px 13px -5px rgba(0, 0, 0, 1);
+    margin-bottom: 3em;
   }
 
   .summary-wrapper {
@@ -44,23 +55,31 @@
 
     .detailed-description {
       padding: 0 10% 0 0;
+
+      p {
+        margin-bottom: 0;
+      }
     }
   }
 
 
   .pricing-wrapper {
-    background-color: $snow;
+    background-color: #fff;
     border-top: 1px solid $border-shadow;
     padding: 2em 0;
 
     h2 {
-      color: $text-blue;
-      font-size: 3em;
+      color: #0277bd;
+      font-family: 'Play', sans-serif;
+      font-size: 2em;
+      font-weight: 700;
       margin-bottom: 1em;
       text-align: center;
     }
 
     .pricing {
+      background: transparent;
+      box-shadow: none;
       display: flex;
       justify-content: center;
       width: 80%;
@@ -87,7 +106,7 @@
       border: 1px solid $sky;
 
       h4 {
-        color: rgba(#A5B7D3, .7);
+        color: rgba(#A5B7D3, 1);
         font-size: 1.7rem;
         font-weight: 500;
         letter-spacing: .5px;

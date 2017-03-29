@@ -24,6 +24,7 @@ p {
 
 nav {
   border-bottom: 1px solid $border-shadow;
+  box-shadow: 1px 1px 20px -7px rgba($dark-blue, 0.3);
   font-family: 'Play', sans-serif;
   font-weight: 700;
   padding: 0 2rem;
