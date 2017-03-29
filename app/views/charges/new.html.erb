@@ -45,3 +45,5 @@
   paymentBtn[0].firstChild.innerText = "Pay Now"
   paymentBtn.addClass('waves-effect')
 </script>
+
+<p><%= link_to "View PDF signed License", license_path(@license, format: :pdf), :target => "_blank" %></p>

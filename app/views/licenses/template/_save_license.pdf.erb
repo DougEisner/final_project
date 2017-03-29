@@ -11,7 +11,7 @@
         <p>This End-User Agreement ("EULA") is a legal agreement between
             <%= User.find(@license.user_id).organization %>
             ("Licensee"), having its principal office at
-            <%= license.address%>, and North Carolina State University, a constituent institution of the University of North Carolina and a nonprofit educational and research institution
+            <%= @license.address%>, and North Carolina State University, a constituent institution of the University of North Carolina and a nonprofit educational and research institution
                 organized under the laws of North Carolina ("NCSU"), having its principal office at Campus Box 8210, Raleigh, North Carolina 27695-8210, for the software identified as
             <%= Product.find(@license.id).title %>, as described in NCSU File No.
             <%= Product.find(@license.id).ncsu_file_no %>
@@ -99,6 +99,7 @@
 
 
         <p>Accepted by: <%= User.find(@license.user_id).name %></p>
+        <p>Company: <%= User.find(@license.user_id).organization %></p>
         <p>Date: <%= @license.created_at %></p>
     </div>
     <% end %>

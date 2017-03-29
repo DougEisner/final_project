@@ -10,6 +10,15 @@ class LicensesController < ApplicationController
   # GET /licenses/1
   # GET /licenses/1.json
   def show
+    respond_to do |format|
+      format.html
+       # display a pdf that already exists
+      format.pdf do
+        render pdf: "license_agreement",
+              template: "licenses/license.pdf.erb",
+              locals: {:license => @license}
+      end
+    end
   end
 
   # GET /licenses/new
@@ -32,6 +41,7 @@ class LicensesController < ApplicationController
         format.html { redirect_to :controller => 'charges', :action => 'new', :license_id => @license.id}
 
         format.json { render :show, status: :created, location: @license }
+        save_pdf
       else
         format.html { render :new }
         format.json { render json: @license.errors, status: :unprocessable_entity }
@@ -73,4 +83,18 @@ class LicensesController < ApplicationController
     def license_params
       params.require(:license).permit(:user_id, :product_id, :price, :expiration_date, :address, :accept)
     end
+
+    def save_pdf
+      body_html = render_to_string( template: "licenses/template/_save_license.pdf.erb" )
+      pdf = WickedPdf.new.pdf_from_string(
+          body_html,
+          orientation: 'Portrait',
+          margin: { bottom: 20, top: 30 })
+
+       # then save to a file
+      save_path = Rails.root.join('pdfs',"license_#{Time.now}.pdf")
+      File.open(save_path, 'wb') do |file|
+        file << pdf
+    end
+   end
 end
