@@ -12,11 +12,14 @@ class Product < ApplicationRecord
       search_terms.each do |search|
         search_results << where("title ILIKE ? OR summary ILIKE ? OR detailed_description ILIKE ?", "%#{search}%", "%#{search}%", "%#{search}%")
       end
-      if search_results.count == 1
-        search_results[0]
-      else
-        search_results[1]
-      end
+        results = search_results.flatten
+        results.uniq
+
+      # if search_results.count == 1
+      #   search_results[0]
+      # else
+      #   search_results[1]
+      # end
     else
       Product.all
     end
