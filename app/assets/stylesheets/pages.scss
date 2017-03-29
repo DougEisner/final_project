@@ -119,36 +119,6 @@ nav {
   }
 }
 
-#customers {
-  background-color: $snow;
-  border-top: 1px solid $border-shadow;
-  padding: 8em 3em;
-
-  .container {
-    width: 100%;
-  }
-
-  .card {
-    border-radius: 10px;
-    box-shadow: 0px 50px 160px 0 rgba($dark-blue, 0.18);
-    margin: .5rem;
-    padding: none;
-
-    img {
-      margin-top: 1rem;
-      width: 100%;
-    }
-
-    span {
-      align-items: center;
-      display: flex;
-      flex-flow: row nowrap;
-      margin: 1rem 0;
-    }
-  }
-
-}
-
 @media #{$medium-and-down} {
   nav {
     padding: 0;
