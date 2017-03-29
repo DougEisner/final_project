@@ -1,4 +1,5 @@
 <section id="payment">
+  <%= link_to "View License PDF", license_path(@license, format: :pdf), :target => "_blank", class: "btn-flat pdf waves-effect waves-light" %>
 
   <div class="invoice z-depth-3">
     <div class="invoice-head">
@@ -45,5 +46,3 @@
   paymentBtn[0].firstChild.innerText = "Pay Now"
   paymentBtn.addClass('waves-effect')
 </script>
-
-<p><%= link_to "View PDF signed License", license_path(@license, format: :pdf), :target => "_blank" %></p>

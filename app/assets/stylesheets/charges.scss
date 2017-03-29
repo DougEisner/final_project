@@ -4,11 +4,26 @@
 
 #payment {
   display: flex;
-  justify-content: center;
+  align-items: center;
   padding: 5em;
+  flex-direction: column;
 
   p, h4, h5, h6 {
     margin: 0;
+  }
+
+  .pdf {
+    background-color: $white;
+    border-radius: 5px;
+    border: 1px solid $sky;
+    color: $purple;
+    font-size: 14px;
+    margin-bottom: 2em;
+    transition: all .5s ease;
+
+    &:hover {
+      border-color: $purple;
+    }
   }
 
   .invoice {
@@ -92,7 +107,7 @@
       .total {
         display: flex;
         align-items: center;
-        
+
         h6 {
           font-weight: 700;
           text-transform: uppercase;
