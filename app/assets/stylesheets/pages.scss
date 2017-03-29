@@ -115,6 +115,11 @@ nav {
   background-color: $white;
   display: flex;
 
+  .container {
+    margin-bottom: 10em;
+    margin-top: 3em;
+  }
+
   .about-title {
     margin: 4em 0;
   }
