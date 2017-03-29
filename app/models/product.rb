@@ -5,9 +5,18 @@ class Product < ApplicationRecord
   has_attached_file :image, styles: { medium: "250x250" }
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
-  def self.search(search)
-    if search
-      where("title ILIKE ? OR summary ILIKE ? OR detailed_description ILIKE ?", "%#{search}%", "%#{search}%", "%#{search}%")
+  def self.search(search_input)
+    if search_input.length > 1
+      search_results = []
+      search_terms = search_input.strip.split(" ")
+      search_terms.each do |search|
+        search_results << where("title ILIKE ? OR summary ILIKE ? OR detailed_description ILIKE ?", "%#{search}%", "%#{search}%", "%#{search}%")
+      end
+      if search_results.count == 1
+        search_results[0]
+      else
+        search_results[1]
+      end
     else
       Product.all
     end
