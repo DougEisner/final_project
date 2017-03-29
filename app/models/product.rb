@@ -6,7 +6,7 @@ class Product < ApplicationRecord
   validates_attachment_content_type :image, content_type: /\Aimage\/.*\Z/
 
   def self.search(search_input)
-    if search_input.length > 1
+    if !search_input.nil? && search_input.length > 1
       search_results = []
       search_terms = search_input.strip.split(" ")
       search_terms.each do |search|
@@ -14,12 +14,6 @@ class Product < ApplicationRecord
       end
         results = search_results.flatten
         results.uniq
-
-      # if search_results.count == 1
-      #   search_results[0]
-      # else
-      #   search_results[1]
-      # end
     else
       Product.all
     end
